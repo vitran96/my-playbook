@@ -1,5 +1,5 @@
 ---
-- name: Ensure mouse acceleration is disabled.
+- name: Set mouse acceleration disabled.
   ansible.windows.win_regedit:
     path: HKCU:\Control Panel\Mouse
     name: "{{ item }}"

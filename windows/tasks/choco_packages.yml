@@ -1,5 +1,5 @@
 ---
-- name: Ensure configured Chocolatey packages are installed.
+- name: Install Choco packages
   chocolatey.chocolatey.win_chocolatey:
     name: "{{ item.name | default(item) }}"
     state: "{{ item.state | default('present') }}"

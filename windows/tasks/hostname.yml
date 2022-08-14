@@ -1,5 +1,5 @@
 ---
-- name: Ensure configured hostname set.
+- name: Configured hostname.
   ansible.windows.win_hostname:
     name: "{{ custom_hostname }}"
   register: restart
