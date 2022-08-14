@@ -23,6 +23,10 @@
     - import_tasks: tasks/choco_packages.yml
       tags: ["choco_packages"]
 
+    - import_tasks: tasks/desktop.yml
+      when: remove_desktop_icons
+      tags: ["desktop"]
+
     - import_tasks: tasks/windows_features.yml
       when: install_windows_features
       tags: ["windows_features"]
