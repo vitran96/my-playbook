@@ -1,80 +1,6 @@
-# Windows Ansible Playbook
-
-![Logo](files/logo.png)
-
-![badge-gh-actions]
-![badge-windows-10]
-![badge-windows-11]
-![badge-license]
-
-This playbook installs and configures most of the software I use on my Windows 11 machine for software development.
-
-## Contents
-
-- [Playbook capabilities](#playbook-capabilities)
-- [Installation](#installation)
-- [Windows host prerequisites installation](#prepare-your-windows-host-)
-- [Ansible control node prerequisites installation](#ansible-control-node-)
-- [Running a specific set of tagged tasks](#running-a-specific-set-of-tagged-tasks)
-- [Overriding Defaults](#overriding-defaults)
-- [Included Applications / Configuration (Default)](#included-applications--configuration-default)
-
-## Playbook capabilities
-
-> **NOTE:** The Playbook is fully configurable. You can skip or reconfigure any task by [Overriding Defaults](#overriding-defaults).
-
-- **Software**
-  - Ensures Bloatware is removed (see default config for a complete list of Bloatware).
-  - Ensure software and packages selected by the user are installed via Chocolatey.
-- **Windows apps & features**
-  - Ensures the Optional Windows Features chosen by the user are installed and enabled.
-  - Ensures WSL2 distro selected by the user is installed and enabled.
-  - Ensures selected by user volumes are defragmented (in parallel).
-- **Windows Settings**
-  - **Explorer**
-    - Ensures Explorer includes the file extension in file names.
-    - Ensures Explorer opens itself to the Computer view.
-    - Ensures the Ribbon menu is disabled in Windows Explorer.
-    - Ensures Right-click Context Menu enabled (Windows 11).
-  - **Start Menu**
-    - Ensures Automatic Install of Suggested Apps disabled.
-    - Ensures App Suggestions in Start menu disabled.
-    - Ensures popup "tips" about Windows disabled.
-    - Ensures 'Windows Welcome Experience' disabled.
-  - **Taskbar**
-    - Ensures 'Search' unpinned from Taskbar.
-    - Ensures Task View, Chat, and Cortana are unpinned from Taskbar.
-    - Ensures 'News and Interests' unpinned from Taskbar.
-    - Ensures 'People' unpinned from Taskbar.
-    - Ensures 'Edge', 'Store' other built-in shortcuts unpinned from Taskbar.
-  - **Desktop**
-    - Ensure Desktop icons are removed.
-  - **General**
-    - Ensure configured hostname selected by the user is set.
-    - Ensure remote desktop services are configured.
-    - Ensure the sound scheme is set to 'No sounds'.
-    - Ensure the power plan selected by the user is set.
-    - Ensure Windows updates are selected by the user installed.
-    - Ensures mouse acceleration is disabled.
-- **Terminal Settings**
-  - Ensures [oh-my-posh](https://ohmyposh.dev/) with the theme chosen by the user is set as a default PowerShell theme engine.
+# Windows playbook
 
 ## Installation
-
-### Prepare your Windows host ⏲
-
-#### **This playbook was tested on Windows 10 2004 and Windows 11 21H2 (Pro, Ent). Other versions may work but have not tried.**
-
-Copy and paste the code below into your PowerShell terminal to get your Windows machine ready to work with Ansible.
-
-```powershell
-[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-$url = "https://raw.githubusercontent.com/AlexNabokikh/windows-playbook/master/setup.ps1"
-$file = "$env:temp\setup.ps1"
-
-(New-Object -TypeName System.Net.WebClient).DownloadFile($url, $file)
-powershell.exe -ExecutionPolicy ByPass -File $file -Verbose
-```
 
 ### Ansible Control node 🕹
 
@@ -85,8 +11,8 @@ powershell.exe -ExecutionPolicy ByPass -File $file -Verbose
 
 2. Clone or download this repository to your local drive.
 3. Run `ansible-galaxy install -r requirements.yml` inside this directory to install required Ansible collections.
-4. Add the IP address and credentials of your Windows machine into the `inventory` file
-5. Run `ansible-playbook main.yml` inside this directory.
+4. Add the IP address and credentials of your Windows machine into the `inventory.ini` file
+5. Run `ansible-playbook -i inventory.ini main.yml` inside this directory.
 
 ### Running a specific set of tagged tasks
 

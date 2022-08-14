@@ -1,0 +1,6 @@
+---
+- name: Enable remove signed execution
+
+- name: Install chocolatey
+
+- name: Install winget
