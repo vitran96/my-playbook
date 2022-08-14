@@ -18,7 +18,6 @@ choco_packages:
   #   state: latest
   #   choco_args: --ignorechecksum
   - oh-my-posh
-  - Firefox
   - git
   - powertoys
   - python3
@@ -26,6 +25,7 @@ choco_packages:
   - vlc
   - vscode
   - jetbrainsmononf
+  - firefox
 
 install_windows_updates: true
 windows_updates_reboot: true

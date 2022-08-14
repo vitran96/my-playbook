@@ -1,0 +1,4 @@
+---
+- name: Upload all package to machine
+
+- name: Install packages
