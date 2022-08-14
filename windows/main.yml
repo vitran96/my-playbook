@@ -21,7 +21,7 @@
       tags: ["debloat"]
 
     - import_tasks: tasks/choco_packages.yml
-      tags: ["choco_packages"]
+      tags: ["choco"]
 
     - import_tasks: tasks/desktop.yml
       when: remove_desktop_icons
