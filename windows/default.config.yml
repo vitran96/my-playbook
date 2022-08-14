@@ -23,9 +23,11 @@ choco_packages:
   - python3
   - sharex
   - vlc
-  - vscode
+  - -name: vscode
+    choco_args: --params /NoDesktopIcon
   - jetbrainsmononf
-  - firefox
+  - name: firefox
+    choco_args: --params /NoDesktopShortcut
 
 install_windows_updates: true
 windows_updates_reboot: true

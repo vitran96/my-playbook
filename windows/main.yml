@@ -46,7 +46,3 @@
     - import_tasks: tasks/mouse.yml
       when: disable_mouse_acceleration
       tags: ["mouse"]
-
-    - import_tasks: tasks/power_plan.yml
-      when: change_power_plan
-      tags: ["power"]

@@ -5,7 +5,6 @@
     state: "{{ item.state | default('present') }}"
     version: "{{ item.version | default(omit) }}"
     choco_args: "{{ item.choco_args | default(omit) }}"
-    params: "{{ item.params | default(omit) }}"
   loop: "{{ choco_packages }}"
 
 - name: Clean chocolatey and nuget cache.
