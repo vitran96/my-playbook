@@ -11,7 +11,7 @@
 
 2. Clone or download this repository to your local drive.
 3. Run `ansible-galaxy install -r requirements.yml` inside this directory to install required Ansible collections.
-4. Add the IP address and credentials of your Windows machine into the `inventory.ini` file
+4. Add the IP address and credentials of your Windows machine into the [inventory](./default.inventory.ini) file
 5. Run `ansible-playbook -i inventory.ini main.yml` inside this directory.
 
 ### Running a specific set of tagged tasks
