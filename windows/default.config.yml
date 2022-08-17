@@ -64,6 +64,13 @@ choco_packages:
   - zalopc
   - vagrant
   - virtualbox
+  # - steam-client
+  # - epicgameslauncher
+  # - battle.net
+  # - origin
+  # - goggalaxy
+  # - ubisoft-connect
+  # - googledrive
   # - grammarly
   # - autohotkey
   # - packer
