@@ -26,9 +26,11 @@ choco_packages:
   #   version: "2022.002.20191"
   #   state: latest
   #   choco_args: --ignorechecksum
+  # TODO: consider install git in setup script
+  - git
+  # TODO: consider move oh-my-posh to separate task
   - oh-my-posh
   - gsudo
-  - git
   - powertoys
   - python3
   - notion
@@ -43,6 +45,7 @@ choco_packages:
   # - svn
   # - tortoisesvn
   - diffmerge
+  # TODO: test nvm why not work
   - nvm
   # - postman
   - name: figma
@@ -51,6 +54,7 @@ choco_packages:
   # - doxygen.install
   # - graphviz
   - powershell-core
+  # TODO: test postgresql13 why cannot install
   - name: postgresql13
     choco_args: --params '/Password:admin' --params-global
   - name: thunderbird
@@ -75,6 +79,10 @@ choco_packages:
   # - autohotkey
   # - packer
   # - geforce-experience
+  # TODO: consider make a task to install emacs and set up doom emacs
+  # - emacs
+  # TODO: consider make a task to setup neovim
+  # - neovim
   - name: firefox
     choco_args: --params /NoDesktopShortcut
 
