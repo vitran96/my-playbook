@@ -67,6 +67,7 @@ choco_packages:
   # - grammarly
   # - autohotkey
   # - packer
+  # - geforce-experience
   - name: firefox
     choco_args: --params /NoDesktopShortcut
 
