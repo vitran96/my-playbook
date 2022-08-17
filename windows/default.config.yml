@@ -1,4 +1,7 @@
 ---
+do_init: true
+# TODO: remove init task
+
 configure_explorer: true
 
 configure_hostname: false
@@ -24,14 +27,46 @@ choco_packages:
   #   state: latest
   #   choco_args: --ignorechecksum
   - oh-my-posh
+  - gsudo
   - git
   - powertoys
   - python3
+  - notion
   - sharex
   - vlc
   - name: vscode
     choco_args: --params /NoDesktopIcon
+  - visualstudio2022community
+  - intellijidea-community
+  - notepadplusplus
+  # - cmake
+  # - svn
+  # - tortoisesvn
+  - diffmerge
+  - nvm
+  # - postman
+  - name: figma
+    choco_args: --ignorechecksum
+  # - dbeaver
+  # - doxygen.install
+  # - graphviz
+  - powershell-core
+  - name: postgresql13
+    choco_args: --params '/Password:admin' --params-global
+  - name: thunderbird
+    choco_args: --params /NoDesktopShortcut
+  - 7zip
+  - anydesk
+  - filezilla
+  - hwmonitor
+  - docker-desktop
   - jetbrainsmononf
+  - zalopc
+  - vagrant
+  - virtualbox
+  # - grammarly
+  # - autohotkey
+  # - packer
   - name: firefox
     choco_args: --params /NoDesktopShortcut
 
@@ -56,6 +91,7 @@ install_windows_features: false
 windows_features:
   Microsoft-Hyper-V: true
 
+# This should be off if done via internal wsl
 # List of valid distributions that can be installed:
 # wsl-alpine
 # wsl-archlinux
@@ -110,6 +146,22 @@ bloatware:
   - Microsoft.ZuneMusic
   - Microsoft.ZuneVideo
   - MicrosoftTeams
+
+winget_packages:
+  - name: AgileBits.1Password
+    source: winget
+  - name: Spotify.Spotify
+    source: winget
+  - name: Telegram.TelegramDesktop
+    source: winget
+  - name: Microsoft.Skype
+    source: winget
+  # Messenger
+  - name: 9WZDNCRF0083
+    source: msstore
+  # GoTiengViet
+  - name: 9P1F8XG2LZM9
+    source: msstore
 
 defrag_volumes: false
 include_volumes:

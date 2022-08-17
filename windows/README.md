@@ -20,6 +20,47 @@
 ansible-playbook -i inventory.ini main.yml --tags "choco,wsl"
 ```
 
+## Others
+
+```powershell
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+$url = "https://raw.githubusercontent.com/AlexNabokikh/windows-playbook/master/setup.ps1"
+$file = "$env:temp\setup.ps1"
+(New-Object -TypeName System.Net.WebClient).DownloadFile($url, $file)
+powershell.exe -ExecutionPolicy ByPass -File $file -Verbose
+```
+
+- `winget` must be install from MSStore: AppInstaller
+- Office 365 can only be installed from MSStore?
+- What about `wsl`?
+- Uninstall these apps: Disnay+, Adobe Express, Prime Video, Tiktok, Instagram, Paint?, ClipChamp, OneNote
+- nvm not on path - unknown bug
+- winget execution failed - ???
+- cannot install postgres with params
+- missing steam, epicgame, battlenet, origin, ubisoft
+- missing godot, kdenlive, gimp, inkscape, blender, obs
+- missing aseprite
+- missing awscli (download online and install, should done silently)
+- crete dotfile repo (like win terminal setting, powershell profile, usefull app profile, powertoy profile, 1password profile, firefox profile?, edge profile?, etc) and backup. On set up new machine, use dotfile repo to setup
+- can i set these setting from command line or ansible? :
+  - set Dark mode
+  - turn on storage sense
+  - turn on share clipboard
+  - turn on clipboard history
+  - set default browser to FireFox
+  - set dim screen time and lock time for on battery and plugged
+  - turn on microphone if exist
+  - turn on developer mode
+  - turn off xbox gamebar XBox button (maybe also windows hoykey)
+  - turn on receive update on MS products
+  - turn on notify restart required on Win Update complete
+  - turn on save Restartable app and turn them back on on sign in (is this bad??)
+  - set windows terminal as default console
+- Other set up to do:
+  - 1Password
+  - FireFox sync
+  - FireFox login to Google
+  - IntelliJ sync??
 ## Author
 
 This project was inspired by [Alexander Nabokikh](https://www.linkedin.com/in/nabokih/)

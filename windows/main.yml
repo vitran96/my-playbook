@@ -12,6 +12,10 @@
       tags: ["always"]
 
   tasks:
+    - import_tasks: tasks/init.yml
+      when: do_init
+      tags: ["init"]
+
     - import_tasks: tasks/updates.yml
       when: install_windows_updates
       tags: ["updates"]
@@ -20,8 +24,14 @@
       when: remove_bloatware
       tags: ["debloat"]
 
+    - import_tasks: tasks/winget_packages.yml
+      tags: ["winget"]
+
     - import_tasks: tasks/choco_packages.yml
       tags: ["choco"]
+
+    # - import_tasks: tasks/local_packages.yml
+    #   tags: ["local"]
 
     - import_tasks: tasks/desktop.yml
       when: remove_desktop_icons
