@@ -12,10 +12,6 @@
       tags: ["always"]
 
   tasks:
-    - import_tasks: tasks/init.yml
-      when: do_init
-      tags: ["init"]
-
     - import_tasks: tasks/updates.yml
       when: install_windows_updates
       tags: ["updates"]
