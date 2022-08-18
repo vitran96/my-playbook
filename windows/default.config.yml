@@ -74,11 +74,14 @@ choco_packages:
   # - origin
   # - goggalaxy
   # - ubisoft-connect
-  # - googledrive
   # - grammarly
   # - autohotkey
-  # - packer
   # - geforce-experience
+  # - googledrive
+  # - packer
+  # - rufus
+  # - etcher
+  # - rpi-imager
   # TODO: consider make a task to install emacs and set up doom emacs
   # - emacs
   # TODO: consider make a task to setup neovim
