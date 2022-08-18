@@ -58,6 +58,22 @@ powershell.exe -ExecutionPolicy ByPass -File $file -Verbose
   - turn on receive update on MS products
   - turn on notify restart required on Win Update complete
   - turn on save Restartable app and turn them back on on sign in (is this bad??)
+  - pin to start:
+    - virtual box
+    - docker
+    - vscode
+    - intellij
+    - visual studio
+    - visual studio installer
+    - messenger
+    - telegram
+    - zalo
+    - spotify
+    - skype (optional)
+  - unpin:
+    - calendar
+    - notepad
+    - store
   - set windows defender:
     - not notify recent activity
     - turn on reputation-based protection

@@ -86,6 +86,8 @@ choco_packages:
   # - emacs
   # TODO: consider make a task to setup neovim
   # - neovim
+  # - logitech-options
+  # - unifying
   - name: firefox
     choco_args: --params /NoDesktopShortcut
 
