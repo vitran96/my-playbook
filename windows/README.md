@@ -67,6 +67,7 @@ powershell.exe -ExecutionPolicy ByPass -File $file -Verbose
   - FireFox sync
   - FireFox login to Google
   - IntelliJ sync??
+
 ## Author
 
 This project was inspired by [Alexander Nabokikh](https://www.linkedin.com/in/nabokih/)
