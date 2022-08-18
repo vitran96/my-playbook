@@ -34,7 +34,7 @@ powershell.exe -ExecutionPolicy ByPass -File $file -Verbose
 - Office 365 can only be installed from MSStore?
 - What about `wsl`?
 - Uninstall these apps: Disnay+, Adobe Express, Prime Video, Tiktok, Instagram, Paint?, ClipChamp, OneNote
-- nvm not on path - unknown bug
+- nvm not on path - unknown bug??
 - winget execution failed - ???
 - cannot install postgres with params
 - missing godot, kdenlive, gimp, inkscape, blender, obs
@@ -58,7 +58,9 @@ powershell.exe -ExecutionPolicy ByPass -File $file -Verbose
   - turn on receive update on MS products
   - turn on notify restart required on Win Update complete
   - turn on save Restartable app and turn them back on on sign in (is this bad??)
-  - set windows defender to not notify recent activity
+  - set windows defender:
+    - not notify recent activity
+    - turn on reputation-based protection
   - set windows terminal as default console
 - Other set up to do:
   - 1Password
