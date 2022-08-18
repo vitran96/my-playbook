@@ -37,7 +37,6 @@ powershell.exe -ExecutionPolicy ByPass -File $file -Verbose
 - nvm not on path - unknown bug
 - winget execution failed - ???
 - cannot install postgres with params
-- missing steam, epicgame, battlenet, origin, ubisoft
 - missing godot, kdenlive, gimp, inkscape, blender, obs
 - missing aseprite
 - missing awscli (download online and install, should done silently)
@@ -59,6 +58,7 @@ powershell.exe -ExecutionPolicy ByPass -File $file -Verbose
   - turn on receive update on MS products
   - turn on notify restart required on Win Update complete
   - turn on save Restartable app and turn them back on on sign in (is this bad??)
+  - set windows defender to not notify recent activity
   - set windows terminal as default console
 - Other set up to do:
   - 1Password
