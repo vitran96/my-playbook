@@ -44,7 +44,11 @@ powershell.exe -ExecutionPolicy ByPass -File $file -Verbose
 - crete dotfile repo (like win terminal setting, powershell profile, usefull app profile, powertoy profile, 1password profile, firefox profile?, edge profile?, etc) and backup. On set up new machine, use dotfile repo to setup
 - can i set these setting from command line or ansible? :
   - set Dark mode
-  - turn on storage sense
+  - turn on storage sense. set up storage sense:
+    - run every week
+    - bin: 30 days
+    - download: 60 days
+    - on drive sync: 60 days
   - turn on share clipboard
   - turn on clipboard history
   - set default browser to FireFox
