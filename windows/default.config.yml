@@ -76,6 +76,7 @@ choco_packages:
   # - ubisoft-connect
   # - grammarly
   # - autohotkey
+  # - awscli
   # - geforce-experience
   # - googledrive
   # - packer
