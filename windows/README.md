@@ -24,7 +24,7 @@ ansible-playbook -i inventory.ini main.yml --tags "choco,wsl"
 
 ```powershell
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-$url = "https://raw.githubusercontent.com/AlexNabokikh/windows-playbook/master/setup.ps1"
+$url = "https://raw.githubusercontent.com/vitran96/my-playbook/master/helper/setup.ps1"
 $file = "$env:temp\setup.ps1"
 (New-Object -TypeName System.Net.WebClient).DownloadFile($url, $file)
 powershell.exe -ExecutionPolicy ByPass -File $file -Verbose
@@ -38,7 +38,7 @@ powershell.exe -ExecutionPolicy ByPass -File $file -Verbose
 - winget execution failed - ???
 - cannot install postgres with params
 - missing godot, kdenlive, gimp, inkscape, blender, obs
-- missing aseprite
+- missing aseprite (.\Aseprite-v1.2.39.exe /VERYSILENT /NORESTART /SP- /LOG)
 - missing awscli (download online and install, should done silently)
 - crete dotfile repo (like win terminal setting, powershell profile, usefull app profile, powertoy profile, 1password profile, firefox profile?, edge profile?, etc) and backup. On set up new machine, use dotfile repo to setup
 - can i set these setting from command line or ansible? :
