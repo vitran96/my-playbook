@@ -55,9 +55,9 @@ choco_packages:
   #   choco_args: --params /NoDesktopShortcut
   - 7zip
   # - anydesk
-  - filezilla
-  - hwmonitor
-  - docker-desktop
+  # - filezilla
+  # - hwmonitor
+  # - docker-desktop
   - jetbrainsmononf
   - zalopc
   - vagrant
@@ -68,11 +68,11 @@ choco_packages:
   # - origin
   # - goggalaxy
   # - ubisoft-connect
-  # - warp
-  # - grammarly
-  # - autohotkey
+  - warp
+  - grammarly
+  - autohotkey
   # - awscli
-  # - geforce-experience
+  - geforce-experience
   # - googledrive
   # - packer
   # - rufus
