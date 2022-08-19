@@ -1,7 +1,4 @@
 ---
-do_init: true
-# TODO: remove init task
-
 configure_explorer: true
 
 configure_hostname: false

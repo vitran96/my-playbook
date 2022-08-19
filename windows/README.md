@@ -4,7 +4,7 @@
 
 ### Ansible Control node 🕹
 
-1. [Install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/index.html):
+1. [Install Ansible >=2.10](https://docs.ansible.com/ansible/latest/installation_guide/index.html):
 
    1. Upgrade Pip: `pip3 install --upgrade pip`
    2. Install Ansible: `pip3 install ansible`
