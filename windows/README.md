@@ -78,6 +78,7 @@ powershell.exe -ExecutionPolicy ByPass -File $file -Verbose
     - not notify recent activity
     - turn on reputation-based protection
   - set windows terminal as default console
+  - Text service and Input language: remove switch input and swit layout hotkey
 - Other set up to do:
   - 1Password
   - FireFox sync
