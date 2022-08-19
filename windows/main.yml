@@ -27,19 +27,19 @@
     - import_tasks: tasks/winget_packages.yml
       tags: ["winget"]
 
-    - import_tasks: tasks/choco_packages.yml
-      tags: ["choco"]
+    - import_tasks: tasks/ohmyposh.yml
+      when: install_ohmyposh
+      tags: ["ohmyposh"]
 
     # - import_tasks: tasks/local_packages.yml
     #   tags: ["local"]
 
+    - import_tasks: tasks/choco_packages.yml
+      tags: ["choco"]
+
     # - import_tasks: tasks/fonts.yml
     #   when: install_fonts
     #   tags: ["fonts"]
-
-    # - import_tasks: tasks/ohmyposh.yml
-    #   when: install_ohmyposh
-    #   tags: ["ohmyposh"]
 
     - import_tasks: tasks/desktop.yml
       when: remove_desktop_icons

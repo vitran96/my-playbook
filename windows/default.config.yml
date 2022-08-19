@@ -23,10 +23,7 @@ choco_packages:
   #   version: "2022.002.20191"
   #   state: latest
   #   choco_args: --ignorechecksum
-  # TODO: consider install git in setup script
   - git
-  # TODO: consider move oh-my-posh to separate task
-  - oh-my-posh
   - gsudo
   - powertoys
   - python3
@@ -52,12 +49,12 @@ choco_packages:
   # - graphviz
   - powershell-core
   # TODO: test postgresql13 why cannot install
-  - name: postgresql13
-    choco_args: --params '/Password:admin' --params-global
-  - name: thunderbird
-    choco_args: --params /NoDesktopShortcut
+  # - name: postgresql13
+  #   choco_args: --params '/Password:admin' --params-global
+  # - name: thunderbird
+  #   choco_args: --params /NoDesktopShortcut
   - 7zip
-  - anydesk
+  # - anydesk
   - filezilla
   - hwmonitor
   - docker-desktop
@@ -65,8 +62,8 @@ choco_packages:
   - zalopc
   - vagrant
   - virtualbox
-  # - steam-client
-  # - epicgameslauncher
+  - steam-client
+  - epicgameslauncher
   # - battle.net
   # - origin
   # - goggalaxy
@@ -83,7 +80,7 @@ choco_packages:
   # - rpi-imager
   # TODO: consider make a task to install emacs and set up doom emacs
   # - emacs
-  # TODO: consider make a task to setup neovim
+  # TODO: consider make a task to setup neovim and setup neovim plugin
   # - neovim
   # - logitech-options
   # - unifying
