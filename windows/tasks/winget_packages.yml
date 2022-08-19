@@ -1,5 +1,8 @@
 ---
 - name: Install winget packages
   ansible.windows.win_shell: >
-    "winget install --accept-package-agreements --accept-source-agreements -s {{ item.source | default('msstore') }} {{ item.name | default(item) }}"
+    winget install --accept-package-agreements --accept-source-agreements -s {{ item.source | default('msstore') }} {{ item.name | default(item) }}
   loop: "{{ winget_packages }}"
+  register: winget
+
+- debug: var=winget.results
