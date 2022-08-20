@@ -40,7 +40,8 @@ powershell.exe -ExecutionPolicy ByPass -File $file -Verbose
 
 # Note
 
-- Win Terminal setting location: %USERPROFILE%\AppData\Local\Microsoft\PowerToys
+- Win Terminal setting location: %USERPROFILE%\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
+- Powertoy setting location: %USERPROFILE%\AppData\Local\Microsoft\PowerToys
 
 ## TODO
 
