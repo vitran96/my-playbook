@@ -1,3 +1,4 @@
+# Default
 .DS_Store
 *.dll
 *.retry
@@ -7,4 +8,17 @@ config.yml
 roles*
 hosts
 
+# No inventory
 inventory.ini
+
+# No executable, binary
+*.exe
+*.msi
+*.dll
+*.lib
+*.o
+*.so
+*.bin
+
+# No log file
+*.log

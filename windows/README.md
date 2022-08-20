@@ -30,17 +30,29 @@ $file = "$env:temp\setup.ps1"
 powershell.exe -ExecutionPolicy ByPass -File $file -Verbose
 ```
 
-- `winget` must be install from MSStore: AppInstaller
+## Manual setup
+
+- Set up to do:
+  - 1Password
+  - FireFox sync
+  - FireFox login to Google
+  - IntelliJ sync??
+
+# Note
+
+- Win Terminal setting location: %USERPROFILE%\AppData\Local\Microsoft\PowerToys
+
+## TODO
+
+- `winget` must be install from MSStore: AppInstaller. Is it possible to udpate App Installer with Ansible???
 - Office 365 can only be installed from MSStore?
-- What about `wsl`?
+- What about `wsl`? should we use choco??
 - Uninstall these apps: Disnay+, Adobe Express, Prime Video, Tiktok, Instagram, Paint?, ClipChamp, OneNote
 - nvm not on path - unknown bug??
-- winget execution failed - ???
 - cannot install postgres with params
-- missing godot, kdenlive, gimp, inkscape, blender, obs
+- missing godot, gimp, inkscape, blender, obs
 - missing aseprite (.\Aseprite-v1.2.39.exe /VERYSILENT /NORESTART /SP- /LOG)
-- missing awscli (download online and install, should done silently)
-- crete dotfile repo (like win terminal setting, powershell profile, usefull app profile, powertoy profile, 1password profile, firefox profile?, edge profile?, etc) and backup. On set up new machine, use dotfile repo to setup
+- create dotfile repo (like win terminal setting, powershell profile, usefull app profile, powertoy profile) and backup. On set up new machine, use dotfile repo to setup
 - can i set these setting from command line or ansible? :
   - set Dark mode
   - turn on storage sense. set up storage sense:
@@ -79,11 +91,6 @@ powershell.exe -ExecutionPolicy ByPass -File $file -Verbose
     - turn on reputation-based protection
   - set windows terminal as default console
   - Text service and Input language: remove switch input and swit layout hotkey
-- Other set up to do:
-  - 1Password
-  - FireFox sync
-  - FireFox login to Google
-  - IntelliJ sync??
 
 ## Author
 

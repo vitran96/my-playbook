@@ -41,9 +41,6 @@ choco_packages:
   - diffmerge
   # TODO: test nvm why not work
   - nvm
-  # - postman
-  - name: figma
-    choco_args: --ignorechecksum
   # - dbeaver
   # - doxygen.install
   # - graphviz
@@ -59,7 +56,7 @@ choco_packages:
   # - hwmonitor
   # - docker-desktop
   - jetbrainsmononf
-  - zalopc
+  # - zalopc
   - vagrant
   - virtualbox
   - steam-client
@@ -69,10 +66,12 @@ choco_packages:
   # - goggalaxy
   # - ubisoft-connect
   - warp
-  - grammarly
+  # - grammarly
   - autohotkey
   # - awscli
   - geforce-experience
+  # - kdenlive
+  # - alacritty
   # - googledrive
   # - packer
   # - rufus
@@ -169,9 +168,13 @@ winget_packages:
     source: winget
   - name: Spotify.Spotify
     source: winget
-  - name: Telegram.TelegramDesktop
+  # - name: Telegram.TelegramDesktop
+  #   source: winget
+  # - name: Microsoft.Skype
+  #   source: winget
+  - name: Figma.Figma
     source: winget
-  - name: Microsoft.Skype
+  - name: Postman.Postman
     source: winget
   # Messenger
   - name: 9WZDNCRF0083
