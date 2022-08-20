@@ -11,14 +11,14 @@
   ansible.windows.win_reboot:
   when: wsl_status.reboot_required
 
-- name: Ensure Linux kernel update package installed.
+- name: Install WSL2 from Choco.
   chocolatey.chocolatey.win_chocolatey:
     name: wsl2
     ignore_checksums: true
     state: present
-
-- name: Install WSL2 with "{{ wsl2_distribution }}".
-  chocolatey.chocolatey.win_chocolatey:
-    name: "{{ wsl2_distribution }}"
-    ignore_checksums: true
-    state: present
+#
+# - name: Install WSL2 with "{{ wsl2_distribution }}".
+#   chocolatey.chocolatey.win_chocolatey:
+#     name: "{{ wsl2_distribution }}"
+#     ignore_checksums: true
+#     state: present
