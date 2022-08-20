@@ -47,11 +47,9 @@ powershell.exe -ExecutionPolicy ByPass -File $file -Verbose
 
 - `winget` must be install from MSStore: AppInstaller. Is it possible to udpate App Installer with Ansible???
 - Office 365 can only be installed from MSStore?
-- What about `wsl`? should we use choco??
 - Uninstall these apps: Disnay+, Adobe Express, Prime Video, Tiktok, Instagram, Paint?, ClipChamp, OneNote
 - nvm not on path - unknown bug??
-- cannot install postgres with params
-- missing aseprite (.\Aseprite-v1.2.39.exe /VERYSILENT /NORESTART /SP- /LOG)
+- cannot install postgres with param
 - can i set these setting from command line or ansible? :
   - set Dark mode
   - turn on storage sense. set up storage sense:

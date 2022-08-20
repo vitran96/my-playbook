@@ -31,8 +31,9 @@
       when: install_ohmyposh
       tags: ["ohmyposh"]
 
-    # - import_tasks: tasks/local_packages.yml
-    #   tags: ["local"]
+    - import_tasks: tasks/local_packages.yml
+      when: install_local_package
+      tags: ["local"]
 
     - import_tasks: tasks/choco_packages.yml
       tags: ["choco"]
@@ -68,3 +69,7 @@
     - import_tasks: tasks/mouse.yml
       when: disable_mouse_acceleration
       tags: ["mouse"]
+
+    - name: Restart the machine to complete setup.
+      ansible.windows.win_reboot:
+      when: run_reboot_task

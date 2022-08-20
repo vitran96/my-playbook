@@ -179,8 +179,8 @@ winget_packages:
   #   source: winget
   - name: Figma.Figma
     source: winget
-  - name: Postman.Postman
-    source: winget
+  # - name: Postman.Postman
+  #   source: winget
   # Messenger
   - name: 9WZDNCRF0083
     source: msstore
@@ -190,11 +190,12 @@ winget_packages:
 
 install_local_package: true
 local_packages:
-  - Aseprite-v1.2.39.exe
+  - name: Aseprite-v1.2.39.exe
+    params: /VERYSILENT /NORESTART /SP- /LOG
 
 defrag_volumes: false
 include_volumes:
   - C
   - D
 
-finish_reboot: true
+run_reboot_task: true
