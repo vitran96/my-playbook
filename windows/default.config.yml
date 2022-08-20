@@ -7,8 +7,6 @@ custom_hostname: windows-ansible
 configure_start_menu: true
 configure_taskbar: true
 
-disable_mouse_acceleration: true
-
 remote_desktop_enabled: false
 remove_desktop_icons: false
 
@@ -17,22 +15,23 @@ set_sound_scheme: false
 change_power_plan: false
 power_plan: "high performance"
 
+# Note: some package only work after reboot
 choco_packages:
-  # To specify state, version, and args
-  # - name: auto-dark-mode
-  #   version: "2022.002.20191"
-  #   state: latest
-  #   choco_args: --ignorechecksum
+  # Note: Template
+  # - name:
+  #   version: ""
+  #   state:
+  #   ignorechecksum: true
+  #   params:
+  #   choco_args:
   - git
   - gsudo
-  - powertoys
   - python3
   - notion
   - sharex
   - vlc
-  # TODO: test param
   - name: vscode
-    choco_args: --params /NoDesktopIcon
+    params: /NoDesktopIcon
   - visualstudio2022community
   - intellijidea-community
   - notepadplusplus
@@ -40,23 +39,17 @@ choco_packages:
   # - svn
   # - tortoisesvn
   - diffmerge
-  # TODO: test nvm why not work
   - nvm
   # - dbeaver
   # - doxygen.install
   # - graphviz
-  - powershell-core
-  # TODO: test postgresql13 why cannot install
-  # - name: postgresql13
-  #   choco_args: --params '/Password:admin' --params-global
   # - name: thunderbird
-  #   choco_args: --params /NoDesktopShortcut
+  #   params: /NoDesktopShortcut
   - 7zip
   # - anydesk
   # - filezilla
   # - hwmonitor
   # - docker-desktop
-  - jetbrainsmononf
   # - zalopc
   - vagrant
   - virtualbox
@@ -89,9 +82,8 @@ choco_packages:
   # - neovim
   # - logitech-options
   # - unifying
-  # TODO: test param
   - name: firefox
-    choco_args: --params /NoDesktopShortcut
+    params: /NoDesktopShortcut
 
 install_windows_updates: true
 windows_updates_reboot: true
@@ -190,8 +182,7 @@ winget_packages:
   - name: 9P1F8XG2LZM9
     source: msstore
 
-install_local_package: true
-local_package_dest: C:\installer
+local_package_dest: C:\installer\
 local_packages:
   - name: Aseprite-v1.2.39.exe
     params: /VERYSILENT /NORESTART /SP- /LOG

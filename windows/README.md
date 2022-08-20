@@ -40,15 +40,23 @@ powershell.exe -ExecutionPolicy ByPass -File $file -Verbose
 
 # Note
 
-- Win Terminal setting location: %USERPROFILE%\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
-- Powertoy setting location: %USERPROFILE%\AppData\Local\Microsoft\PowerToys
+- Cannot use choco module to install postgres, may be WinRM connection will work
+
+      cinst -y postgresql13 --params /Password:admin
 
 ## TODO
 
+- How to install Office 365 from cmd?
 - `winget` must be install from MSStore: AppInstaller. Is it possible to udpate App Installer with Ansible???
-- Office 365 can only be installed from MSStore?
-- Uninstall these apps: Disnay+, Adobe Express, Prime Video, Tiktok, Instagram, Paint?, ClipChamp, OneNote
-- nvm not on path - unknown bug??
+- Uninstall these apps:
+  - Disn0ey+
+  - Adobe Express
+  - Prime Video
+  - Tiktok
+  - Instagram
+  - Paint?
+  - ClipChamp
+  - OneNote
 - cannot install postgres with param
 - can i set these setting from command line or ansible? :
   - set Dark mode
@@ -61,9 +69,9 @@ powershell.exe -ExecutionPolicy ByPass -File $file -Verbose
   - turn on clipboard history
   - set default browser to FireFox
   - set dim screen time and lock time for on battery and plugged
-  - turn on microphone if exist
+  - turn off microphone if exist
   - turn on developer mode
-  - turn off xbox gamebar XBox button (maybe also windows hoykey)
+  - turn off xbox gamebar XBox button (maybe also the hoykey)
   - turn on receive update on MS products
   - turn on notify restart required on Win Update complete
   - turn on save Restartable app and turn them back on on sign in (is this bad??)

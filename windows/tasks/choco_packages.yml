@@ -4,14 +4,7 @@
     name: "{{ item.name | default(item) }}"
     state: "{{ item.state | default('present') }}"
     version: "{{ item.version | default(omit) }}"
+    ignore_checksums: "{{ item.ignore_checksums | default(false) }}"
+    params: "{{ item.params | default(omit) }}"
     choco_args: "{{ item.choco_args | default(omit) }}"
   loop: "{{ choco_packages }}"
-
-- name: Clean chocolatey and nuget cache.
-  ansible.windows.win_file:
-    path: "{{ item }}"
-    state: absent
-  loop:
-    - '%UserProfile%\AppData\Local\Temp\chocolatey\'
-    - '%UserProfile%\AppData\Local\Temp\nuget\'
-    - '%UserProfile%\AppData\Local\NuGet\Cache\'

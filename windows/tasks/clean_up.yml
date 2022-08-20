@@ -1,0 +1,8 @@
+- name: Clean chocolatey and nuget cache.
+  ansible.windows.win_file:
+    path: "{{ item }}"
+    state: absent
+  loop:
+    - '%UserProfile%\AppData\Local\Temp\chocolatey\'
+    - '%UserProfile%\AppData\Local\Temp\nuget\'
+    - '%UserProfile%\AppData\Local\NuGet\Cache\'

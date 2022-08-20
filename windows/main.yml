@@ -12,9 +12,9 @@
       tags: ["always"]
 
   tasks:
-    # - import_tasks: tasks/hostname.yml
-    #   when: configure_hostname
-    #   tags: ["hostname"]
+    - import_tasks: tasks/hostname.yml
+      when: configure_hostname
+      tags: ["hostname"]
 
     - import_tasks: tasks/updates.yml
       when: install_windows_updates
@@ -28,19 +28,22 @@
       tags: ["winget"]
 
     - import_tasks: tasks/ohmyposh.yml
-      when: install_ohmyposh
       tags: ["ohmyposh"]
 
     - import_tasks: tasks/local_packages.yml
-      when: install_local_package
       tags: ["local"]
 
     - import_tasks: tasks/choco_packages.yml
       tags: ["choco"]
 
-    # - import_tasks: tasks/fonts.yml
-    #   when: install_fonts
-    #   tags: ["fonts"]
+    - import_tasks: tasks/fonts.yml
+      tags: ["fonts"]
+
+    - import_tasks: tasks/terminal.yml
+      tags: ["terminal"]
+
+    - import_tasks: tasks/powertoys.yml
+      tags: ["powertoys"]
 
     - import_tasks: tasks/desktop.yml
       when: remove_desktop_icons
@@ -67,9 +70,11 @@
       tags: ["start_menu"]
 
     - import_tasks: tasks/mouse.yml
-      when: disable_mouse_acceleration
       tags: ["mouse"]
 
+    - import_tasks: tasks/clean_up.yml
+      tags: ["clean"]
+
     - name: Restart the machine to complete setup.
-      ansible.windows.win_reboot:
       when: run_reboot_task
+      ansible.windows.win_reboot:
