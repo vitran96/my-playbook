@@ -37,6 +37,7 @@ powershell.exe -ExecutionPolicy ByPass -File $file -Verbose
   - FireFox sync
   - FireFox login to Google
   - IntelliJ sync??
+  - setup github authentication
 
 # Note
 

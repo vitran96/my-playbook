@@ -51,6 +51,7 @@ choco_packages:
   # - hwmonitor
   # - docker-desktop
   # - zalopc
+  - gh
   - vagrant
   - virtualbox
   - steam-client
