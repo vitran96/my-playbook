@@ -1,8 +1,8 @@
 ---
-# - name: Install Window Terminal.
-#   chocolatey.chocolatey.win_chocolatey:
-#     name: microsoft-windows-terminal
-#     state: present
+- name: Install Window Terminal.
+  chocolatey.chocolatey.win_chocolatey:
+    name: microsoft-windows-terminal
+    state: present
 
 - name: Install PowerShell 7.
   chocolatey.chocolatey.win_chocolatey:
