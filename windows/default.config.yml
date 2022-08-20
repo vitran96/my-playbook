@@ -54,6 +54,7 @@ choco_packages:
   - gh
   - vagrant
   - virtualbox
+  - discord
   - steam-client
   - epicgameslauncher
   # - battle.net
