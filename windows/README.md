@@ -65,6 +65,18 @@ cinst -y postgresql13 --params /Password:admin
   - Paint?
   - ClipChamp
   - OneNote
+  - Microsoft.Microsoft3DViewer
+  - Microsoft.MicrosoftOfficeHub
+  - Microsoft.MicrosoftSolitaireCollection
+  - Microsoft.MixedReality.Portal
+  - Microsoft.MSPaint
+  - Microsoft.Office.OneNote
+  - Microsoft.OneConnect
+  - Microsoft.Print3D
+  - Microsoft.SkypeApp
+  - Microsoft.Wallet
+  - Microsoft.Xbox
+  - Microsoft.XboxApp
 - cannot install postgres with param
 - can i set these setting from command line or ansible? :
   - set Dark mode
