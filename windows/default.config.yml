@@ -30,6 +30,7 @@ choco_packages:
   - notion
   - sharex
   - vlc
+  # TODO: test param
   - name: vscode
     choco_args: --params /NoDesktopIcon
   - visualstudio2022community
@@ -88,6 +89,7 @@ choco_packages:
   # - neovim
   # - logitech-options
   # - unifying
+  # TODO: test param
   - name: firefox
     choco_args: --params /NoDesktopShortcut
 
@@ -189,6 +191,7 @@ winget_packages:
     source: msstore
 
 install_local_package: true
+local_package_dest: C:\installer
 local_packages:
   - name: Aseprite-v1.2.39.exe
     params: /VERYSILENT /NORESTART /SP- /LOG

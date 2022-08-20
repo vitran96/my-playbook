@@ -1,4 +1,12 @@
 ---
-- name: Upload all package to machine
+- name: Upload all package to machine.
+  ansible.windows.win_copy:
+    src: "{{ playbook_dir }}/installer/"
+    dest: "{{ local_package_dest }}"
 
-- name: Install packages
+- name: Install packages.
+  ansible.windows.win_package:
+    path: "{{ local_package_dest }}\\{{ item.name | default(item) }}"
+    state: present
+    arguments: "{{ item.params | default(omit) }}"
+  loop: "{{ local_packages }}"
