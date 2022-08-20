@@ -51,9 +51,7 @@ powershell.exe -ExecutionPolicy ByPass -File $file -Verbose
 - Uninstall these apps: Disnay+, Adobe Express, Prime Video, Tiktok, Instagram, Paint?, ClipChamp, OneNote
 - nvm not on path - unknown bug??
 - cannot install postgres with params
-- missing godot, gimp, inkscape, blender, obs
 - missing aseprite (.\Aseprite-v1.2.39.exe /VERYSILENT /NORESTART /SP- /LOG)
-- create dotfile repo (like win terminal setting, powershell profile, usefull app profile, powertoy profile) and backup. On set up new machine, use dotfile repo to setup
 - can i set these setting from command line or ansible? :
   - set Dark mode
   - turn on storage sense. set up storage sense:

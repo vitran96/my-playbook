@@ -70,6 +70,11 @@ choco_packages:
   - autohotkey
   # - awscli
   - geforce-experience
+  - godot
+  # - gimp
+  # - inkscape
+  - obs-studio
+  # - blender
   # - kdenlive
   # - alacritty
   # - googledrive
@@ -183,7 +188,13 @@ winget_packages:
   - name: 9P1F8XG2LZM9
     source: msstore
 
+install_local_package: true
+local_packages:
+  - Aseprite-v1.2.39.exe
+
 defrag_volumes: false
 include_volumes:
   - C
   - D
+
+finish_reboot: true
