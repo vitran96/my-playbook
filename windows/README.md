@@ -107,6 +107,10 @@ cinst -y postgresql13 --params /Password:admin
     - zalo
     - spotify
     - skype (optional)
+    - discord
+    - terminal
+    - alacritty (optional)
+    - aseprite
   - unpin:
     - calendar
     - notepad
