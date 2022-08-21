@@ -4,11 +4,6 @@
     name: microsoft-windows-terminal
     state: present
 
-- name: Install PowerShell 7.
-  chocolatey.chocolatey.win_chocolatey:
-    name: powershell-core
-    state: present
-
 - name: Setup my Terminal configuration.
   ansible.windows.win_copy:
     src: "{{ playbook_dir }}/dotfiles/WinTerminal/"

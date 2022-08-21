@@ -54,6 +54,13 @@ cinst -y postgresql13 --params /Password:admin
 
 ## TODO
 
+- Create setup alacritty task
+  - alacritty config is at: %APPDATA%\alacritty\alacritty.yml
+- Create powershell task:
+  - change oh-my-posh task to powershell task
+  - Install PS module:
+    - Window Update: `Install-Module PSWindowsUpdate`
+    - PSReadLine: `Install-Module PSReadLine -Force -Scope CurrentUser`
 - How to install Office 365 from cmd?
 - `winget` must be install from MSStore: AppInstaller. Is it possible to udpate App Installer with Ansible???
 - Uninstall these apps:
