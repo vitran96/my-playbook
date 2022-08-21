@@ -120,6 +120,15 @@ cinst -y postgresql13 --params /Password:admin
     - turn on reputation-based protection
   - set windows terminal as default console
   - Text service and Input language: remove switch input and swit layout hotkey
+  - modify explorer context menu:
+    - alacritty:
+      - fix error "%V" -> %V in Computer\HKEY_CLASSES_ROOT\Directory\Background\shell\Open Alacritty here\command
+      - add context menu for drive: Computer\HKEY_CLASSES_ROOT\Drive\shell\Open Alacritty Here\command
+      - add context menu for directory: Computer\HKEY_CLASSES_ROOT\Directory\shell\Alacritty\command
+    - sharex: remove context menu in Computer\HKEY_CLASSES_ROOT\Directory\shell\ShareX
+    - vlc: remove context menu in:
+      - Computer\HKEY_CLASSES_ROOT\Directory\shell\PlayInVlc??
+      - Computer\HKEY_CLASSES_ROOT\Directory\shell\AddToPlaylistVLC
 
 ## Author
 
