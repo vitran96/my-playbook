@@ -122,7 +122,7 @@ cinst -y postgresql13 --params /Password:admin
   - Text service and Input language: remove switch input and swit layout hotkey
   - modify explorer context menu:
     - alacritty:
-      - fix error "%V" -> %V in Computer\HKEY_CLASSES_ROOT\Directory\Background\shell\Open Alacritty here\command
+      - fix error "%V" -> "%V in Computer\HKEY_CLASSES_ROOT\Directory\Background\shell\Open Alacritty here\command
       - add context menu for drive: Computer\HKEY_CLASSES_ROOT\Drive\shell\Open Alacritty Here\command
       - add context menu for directory: Computer\HKEY_CLASSES_ROOT\Directory\shell\Alacritty\command
     - sharex: remove context menu in Computer\HKEY_CLASSES_ROOT\Directory\shell\ShareX
