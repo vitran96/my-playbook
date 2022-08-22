@@ -16,11 +16,7 @@ Function CdkAlias {
 
 New-Alias cdk CdkAlias
 
-Function SudoAlias {
-  gsudo $args
-}
-
-New-Alias sudo SudoAlias
+New-Alias sudo gsudo
 
 # Chocolatey profile
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
