@@ -56,11 +56,13 @@ cinst -y postgresql13 --params /Password:admin
 
 - Create setup alacritty task
   - alacritty config is at: %APPDATA%\alacritty\alacritty.yml
+  - fix error "%V" -> "%V in Computer\HKEY_CLASSES_ROOT\Directory\Background\shell\Open Alacritty here\command
 - Create powershell task:
   - change oh-my-posh task to powershell task
   - Install PS module:
     - Window Update: `Install-Module PSWindowsUpdate`
     - PSReadLine: `Install-Module PSReadLine -Force -Scope CurrentUser`
+- Setup godot setting at: `%APPDATA%/Godot`
 - How to install Office 365 from cmd?
 - `winget` must be install from MSStore: AppInstaller. Is it possible to udpate App Installer with Ansible???
 - Uninstall these apps:
@@ -128,14 +130,11 @@ cinst -y postgresql13 --params /Password:admin
   - set windows terminal as default console
   - Text service and Input language: remove switch input and swit layout hotkey
   - modify explorer context menu:
-    - alacritty:
-      - fix error "%V" -> "%V in Computer\HKEY_CLASSES_ROOT\Directory\Background\shell\Open Alacritty here\command
-      - add context menu for drive: Computer\HKEY_CLASSES_ROOT\Drive\shell\Open Alacritty Here\command
-      - add context menu for directory: Computer\HKEY_CLASSES_ROOT\Directory\shell\Alacritty\command
     - sharex: remove context menu in Computer\HKEY_CLASSES_ROOT\Directory\shell\ShareX
     - vlc: remove context menu in:
       - Computer\HKEY_CLASSES_ROOT\Directory\shell\PlayInVlc??
       - Computer\HKEY_CLASSES_ROOT\Directory\shell\AddToPlaylistVLC
+  - setup internet config to random hardware info
 
 ## Author
 
