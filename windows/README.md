@@ -88,6 +88,7 @@ cinst -y postgresql13 --params /Password:admin
   - Microsoft.XboxApp
 - cannot install postgres with param
 - can i set these setting from command line or ansible? :
+  - change backgroud picture
   - set Dark mode
   - turn on storage sense. set up storage sense:
     - run every week
