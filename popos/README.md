@@ -1,0 +1,84 @@
+# Pop_OS playbook
+
+# Manual step
+
+- Pop OS setting:
+  - No launch dock
+  - Keyboard binding??
+  - change wallpaper to Gura
+- Firefox:
+  - Install Firefox
+  - Sync Firefox
+- Gnome Tweak:
+  - Install gnome-tweak
+  - Install Firefox with tweak extension -> Can we skip this?
+  - Install extensions:
+    - Color picker: https://extensions.gnome.org/extension/3396/color-picker/
+    - Extension list: https://extensions.gnome.org/extension/3088/extension-list/
+    - GS Connect: https://extensions.gnome.org/extension/1319/gsconnect/
+    - Lock keys: https://extensions.gnome.org/extension/36/lock-keys/
+    - Clipboard indicator: https://extensions.gnome.org/extension/779/clipboard-indicator/
+    - Bluetooth quick connect: https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/
+    - Sound output, input device chooser: https://extensions.gnome.org/extension/906/sound-output-device-chooser/
+- Git:
+  - Install git
+  - Install gh
+  - Config git with gh for authentication and ssh
+- Fonts: https://github.com/ryanoasis/nerd-fonts
+  - Install JetbrainsMono Nerd Font
+- Easy Effect:
+  - Auto start
+  - Set profile to Auto Balance (from online)
+- 1Password:
+  - Auto start
+- Doom-emacs:
+  - Install Emacs
+  - Install Doom-emacs
+  - Migrate config
+  - auto start
+- Neo-vim:
+  - Install neo-vim
+  - Install plugin
+  - Migrate config
+- Aseprite:
+  - Build from source??
+  - Clean up
+- qutebrowser:
+  - Install qutebrowser
+  - Migrate config
+- alacritty:
+  - Install alacritty
+  - Migrate config
+- zsh:
+  - example: https://gitlab.com/dtos/etc/dtos-zsh/-/blob/main/etc/dtos/.zshrc
+  - oh my zsh?
+  - powerlevel10k?
+- Cloud storate:
+  - Main GG Drive?
+  - Main Onedrive?
+  - Work Onedrive?
+- Other package:
+  - vscode
+  - intellij
+  - kdenlive
+  - obs
+  - steam
+  - nix package manager?
+  - aptitude?
+  - nala?
+  - exa?
+  - blender?
+  - Some kind of screenshot application!!
+  - ansible
+  - vagrant
+  - virtual box
+  - libvrt + virtual manager + qemu
+  - podman
+  - distrobox?
+  - godot
+  - zip?
+  - diffmerge tool?
+  - discord
+  - wine? bottle?
+  - warp?
+  - Logitech Flow?
