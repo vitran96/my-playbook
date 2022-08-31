@@ -37,12 +37,11 @@ powershell.exe -ExecutionPolicy ByPass -File $file -Verbose
 
 ## Manual setup
 
-- Set up to do:
-  - 1Password
-  - FireFox sync
-  - FireFox login to Google
-  - IntelliJ sync??
-  - setup github authentication
+- 1Password
+- FireFox sync
+- FireFox login to Google
+- IntelliJ sync??
+- setup github authentication
 
 # Note
 
@@ -136,6 +135,7 @@ cinst -y postgresql13 --params /Password:admin
       - Computer\HKEY_CLASSES_ROOT\Directory\shell\PlayInVlc??
       - Computer\HKEY_CLASSES_ROOT\Directory\shell\AddToPlaylistVLC
   - setup internet config to random hardware info
+  - Octave?
 
 ## Author
 

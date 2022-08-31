@@ -6,6 +6,8 @@
   - No launch dock
   - Keyboard binding??
   - change wallpaper to Gura
+  - Install and openSSH server if needed (https://gist.github.com/vitran96/8b67952f05e89cc940b20d24159a9475)
+  - close SSH port server after finish
 - Firefox:
   - Install Firefox
   - Sync Firefox
@@ -82,3 +84,4 @@
   - wine? bottle?
   - warp?
   - Logitech Flow?
+  - octave? (config https://gist.github.com/vitran96/debe1deeaf2601b0d48fad689f01a3ff)
