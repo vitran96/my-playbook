@@ -4,7 +4,8 @@
     name: microsoft-windows-terminal
     state: present
 
+# TODO: review this
 - name: Setup my Terminal configuration.
   ansible.windows.win_copy:
-    src: "{{ playbook_dir }}/dotfiles/WinTerminal/"
+    src: "{{ playbook_dir }}/../../../dotfiles/WinTerminal/"
     dest: '%USERPROFILE%\\AppData\\Local\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\LocalState\\'

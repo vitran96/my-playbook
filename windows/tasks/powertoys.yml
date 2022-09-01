@@ -4,7 +4,8 @@
     name: powertoys
     state: present
 
+# TODO: review this
 - name: Setup my PowerToys configuration.
   ansible.windows.win_copy:
-    src: "{{ playbook_dir }}/dotfiles/PowerToys/"
+    src: "{{ playbook_dir }}/../../../.dotfiles/PowerToys/"
     dest: '%USERPROFILE%\\AppData\\Local\\Microsoft\\PowerToys\\'
