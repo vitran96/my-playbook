@@ -85,3 +85,6 @@
   - warp?
   - Logitech Flow?
   - octave? (config https://gist.github.com/vitran96/debe1deeaf2601b0d48fad689f01a3ff)
+  - speedtest-cli?
+  - lutris?
+  - postman?
