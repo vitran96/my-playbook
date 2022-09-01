@@ -128,6 +128,7 @@ sudo apt install 1password
   - snapd (snap)
   - build-essential
   - pcmanfm?
+  - pfetch / neofetch?
   - gradle?
   - maven?
   - kdenlive
