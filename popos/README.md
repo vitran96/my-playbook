@@ -18,6 +18,7 @@
   - Ignore floating:
     - Settings
     - PopOS Store
+    - Timeshift
   - Settings:
     - Privacy:
       - File history: 30 days
@@ -186,8 +187,16 @@
 - Intellij:
   - Install Intellij?
 - Timeshift:
-  - Install Timeshift:
-  - Config
+  - Install Timeshift
+  ```bash
+  sudo apt install timeshift
+  ```
+  - Config:
+    - Type: rsync (ext4)
+    - Backup:
+      - Weekly - 3 backup
+    - Exclude?
+    - Include?
 - Gnome Tweak:
   - Install gnome-tweak
   - Install Firefox with tweak extension -> Can we skip this?
@@ -204,13 +213,29 @@
   - Set profile to Auto Balance (from online)
 - Doom-emacs:
   - Install Emacs
+  ```bash
+  sudo apt install emacs
+  ```
   - Install Doom-emacs
+  ```bash
+  git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
+  ~/.emacs.d/bin/doom install
+  ```
   - Migrate config
-  - auto start
+  ```bash
+  ln -s $HOME/.dotfiles/.doom.d $HOME/.doom.d
+  ```
+  - auto start server
 - Neo-vim:
   - Install neo-vim
+  ```bash
+  sudo apt install neovim
+  ```
   - Install plugin
   - Migrate config
+  ```bash
+  ln -s $HOME/.dotfiles/nvim $HOME/.config/nvim
+  ```
 - Aseprite:
   - Build from source??
   - Clean up
