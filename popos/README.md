@@ -1,5 +1,9 @@
 # Pop_OS playbook
 
+# Notes
+
+1. Why I cannot update firmware??
+
 # Manual step
 
 - Pop OS setting:
@@ -8,6 +12,39 @@
   - change wallpaper to Gura
   - Install and openSSH server if needed (https://gist.github.com/vitran96/8b67952f05e89cc940b20d24159a9475)
   - close SSH port server after finish
+  - Ignore floating:
+    - Settings
+  - Settings:
+    - Privacy:
+      - File history: 30 days
+      - Auto empty trash
+      - Auto empty temporary
+    - Sharing:
+      - Change PC name
+    - Sound:
+      - over-amplification
+    - Power:
+      - Black screen: 10'
+      - Auto suspend:
+        - Battery: 20'
+        - Plugged: 2hrs
+      - Power button: suspend
+      - Show battery %
+    - Mouse & touchpad:
+      - Mouse speed ~75%
+      - No mouse acceleration
+      - Touchpad Natural scroll
+    - Keyboard
+      - Add Vietnamese-Telex
+    - Accessibility
+      - Sound Keys
+      - Locate Pointer
+    - Date & Time
+      - Format 24-hour
+- Ibus-Unikey:
+  - Install ibus-unikey
+- Fonts: https://github.com/ryanoasis/nerd-fonts
+  - Install JetbrainsMono Nerd Font
 - Git:
   - Install git
   - Config git with gh for authentication and ssh
@@ -75,8 +112,9 @@ sudo apt install 1password
     - wiki -> wiki
   - Log in:
     - github
-    - google
+    - google (main account)
     - leetcode
+    - microsoft (main account)
 - Timeshift:
   - Install Timeshift:
   - Config
@@ -91,8 +129,6 @@ sudo apt install 1password
     - Clipboard indicator: https://extensions.gnome.org/extension/779/clipboard-indicator/
     - Bluetooth quick connect: https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/
     - Sound output, input device chooser: https://extensions.gnome.org/extension/906/sound-output-device-chooser/
-- Fonts: https://github.com/ryanoasis/nerd-fonts
-  - Install JetbrainsMono Nerd Font
 - Easy Effect:
   - Auto start
   - Set profile to Auto Balance (from online)
@@ -132,6 +168,9 @@ sudo apt install 1password
   - gradle?
   - maven?
   - kdenlive
+  - gimp?
+  - inkscape?
+  - krita?
   - obs
   - steam
   - nix package manager?
