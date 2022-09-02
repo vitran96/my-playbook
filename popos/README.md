@@ -7,6 +7,9 @@
 # Manual step
 
 - Pop OS setting:
+  - migrate config?
+    - pop-shell ($HOME/.config/pop-shell/config.json)
+    - pop-system-updater ($HOME/.config/pop-system-updater/config.ron)
   - No launch dock
   - Keyboard binding??
   - change wallpaper to Gura
@@ -42,19 +45,70 @@
     - Date & Time
       - Format 24-hour
 - Ibus-Unikey:
-  - Install ibus-unikey
+  - Install ibus-unikey:
+```bash
+sudo apt install ibus-unikey
+ibus restart
+
+# if ibus daemon not running
+ibus-daemon &
+```
+  - Turn off spell check
 - Fonts: https://github.com/ryanoasis/nerd-fonts
-  - Install JetbrainsMono Nerd Font
+  - Install JetbrainsMono Nerd Font:
+```bash
+cd $HOME/Downloads
+
+curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest \
+| grep "JetBrainsMono.zip" \
+| cut -d : -f 2,3 \
+| tr -d \" \
+| wget -qi -
+
+unzip "JetBrainsMono.zip" "*.ttf" "*.otf" -d $HOME/.local/share/fonts
+
+fc-cache $HOME/.local/share/fonts
+```
 - Git:
   - Install git
   - Config git with gh for authentication and ssh
 - GitHub CLI:
   - Install gh
+  - migrate config? (can be found in $HOME/.config/gh/config.yml)
   - Setup:
 ```bash
 # use SSH
 gh auth login
 gh auth setup-git
+```
+- zsh:
+  - example config: https://gitlab.com/dtos/etc/dtos-zsh/-/blob/main/etc/dtos/.zshrc
+  - install zsh:
+```bash
+sudo apt install zsh
+```
+  - install oh my zsh:
+```bash
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+  - install powerlevel10k
+```bash
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+  - migrate my configuration
+```bash
+ln -s $HOME/.dotfiles/linux/.zshrc $HOME/.zshrc
+ln -s $HOME/.dotfiles/linux/.p10k.zsh $HOME/.p10k.zsh
+
+```
+- bashrc
+  - migrate configuration
+```bash
+ln - s $HOME/.dotfiles/linux/.bashrc $HOME/.bashrc
 ```
 - vscode:
   - Install vscode (https://code.visualstudio.com/docs/setup/linux)
@@ -96,7 +150,7 @@ curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --d
 sudo apt update
 sudo apt install 1password
 ```
-  - Set up hotkey:
+  - Set up hotkey (exist inside $HOME/.config/1Password/settings/settings.json):
     - Win + \ -> gui
     - Win + Shift + \ -> lock
     - Win + ] -> quick access
@@ -150,10 +204,6 @@ sudo apt install 1password
 - alacritty:
   - Install alacritty
   - Migrate config
-- zsh:
-  - example: https://gitlab.com/dtos/etc/dtos-zsh/-/blob/main/etc/dtos/.zshrc
-  - oh my zsh?
-  - powerlevel10k?
 - Cloud storate:
   - Main GG Drive?
   - Main Onedrive?
@@ -176,6 +226,7 @@ sudo apt install 1password
   - nix package manager?
   - aptitude?
   - nala?
+  - deb-get?
   - exa?
   - blender?
   - Some kind of screenshot application!!
