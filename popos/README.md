@@ -344,6 +344,9 @@
 
   export PATH="${PWD}/depot_tools:${PATH}"
 
+  export CC=clang
+  export CXX=clang++
+
   # Build skia
   cd skia
   SKIA_DIR=$(pwd)
@@ -359,9 +362,6 @@
   # Build aseprite
   mkdir build
   cd build
-
-  export CC=clang
-  export CXX=clang++
   cmake \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_CXX_FLAGS:STRING=-stdlib=libc++ \
@@ -373,13 +373,18 @@
     -DCMAKE_INSTALL_PREFIX=$HOME/apps/aseprite \
     -G Ninja \
     ..
-  ninja aseprite
+  ninja -v aseprite
   ninja install
   ```
   - Clean up
 - qutebrowser:
   - Install qutebrowser
   - Migrate config
+- nvm
+  - Install nvm:
+  ```bash
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+  ```
 - Cloud storate?:
   - Main GG Drive?
   - Main Onedrive?
@@ -391,6 +396,7 @@
   - snapd (snap)
   - Python tool:
     - python3
+    - python-is-python3
     - pip3?
   - Stream tool:
     - obs
