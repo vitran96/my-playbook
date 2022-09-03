@@ -307,6 +307,8 @@
   ```
   :PlugInstall
   ```
+- Nautilus:
+  - Show hidden file
 - Gnome Tweak:
   - Install gnome-tweak
   - Install Firefox with tweak extension (if not done)
