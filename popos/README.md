@@ -11,14 +11,9 @@
     - pop-shell ($HOME/.config/pop-shell/config.json)
     - pop-system-updater ($HOME/.config/pop-system-updater/config.ron)
   - No launch dock
-  - Keyboard binding??
   - change wallpaper to Gura
   - Install and openSSH server if needed (https://gist.github.com/vitran96/8b67952f05e89cc940b20d24159a9475)
   - close SSH port server after finish
-  - Ignore floating:
-    - Settings
-    - PopOS Store
-    - Timeshift
   - Settings:
     - Privacy:
       - File history: 30 days
@@ -46,6 +41,49 @@
       - Locate Pointer
     - Date & Time
       - Format 24-hour
+- Keyboard binding (can I somehow back this up or change from command line?):
+  - Normal mode
+    - Win + E -> File Explorer
+    - Win + T -> Terminal
+    - Win + B -> Browser
+    - Win + Esc -> lock screen
+    - Win + S -> toggle stacking outside management mode??
+    - Win -> Launcher
+    - Win + Shift + H/L or Left/Right -> move window between Monitor
+    - Win + Shift + J/K or Down/Up -> move window between workspace
+    - Win + Shift + Home/End -> move window to 1st or last workspace
+    - Win + Ctrl + J/K or Down/Up -> change workspace
+    - Win + Ctrl + Home/End -> change workspace to 1st or last
+    - Win + Ctrl + H/L or Left/Right -> snap window to left or right or unsnap
+    - Win + Q == Alt + F4 -> close window
+    - Win + Y -> toggle grid or float mode
+    - Win + G -> float current window
+    - Win + A -> application launcher
+    - Win + Arrows -> change focus window
+    - Win + Space <> Win + Shift + Space -> change language
+    - Win + V -> show notification
+    - Win + N -> focus active notification
+    - Win + M -> maximize or back to before
+    - Win + Tab == Alt + Tab -> switch application
+    - Alt + Esc -> switch window directly
+    - Win + Esc -> switch window of an app directly
+    - Win + `/= -> switch window of an app
+    - Ctrl + Alt + Tab -> switch system control??
+    - Ctrl + Alt + Esc -> switch system control directly??
+    - Alt + F2 -> run command prompt
+    - Win + D -> show workspaces
+    - Alt + Space -> active window menu
+    - Alt + F7 -> move window
+    - Alt + F8 -> resize window
+    - Win + Enter/Return -> Adjustment Mode
+  - Adjustment Mode:
+    - Enter/Return -> apply change
+    - Esc -> cancel change
+    - H/J/K/L or Left/Down/Up/Right -> move window position
+    - Shift + H/J/K/L or Left/Down/Up/Right -> resize window
+    - Ctrl + H/J/K/L or Left/Down/Up/Right -> swap window
+  - Reserved by other application:
+    - 1Password (look below)
 - Ibus-Unikey:
   - Install ibus-unikey:
   ```bash
@@ -71,6 +109,13 @@
 
   fc-cache $HOME/.local/share/fonts
   ```
+- PopOS Titling
+  - Ignore floating:
+    - Settings
+    - PopOS Store
+    - Timeshift
+- PopOS Shell:
+  - Remove Window title bar
 - Git:
   - Install git
   - Config git with gh for authentication and ssh
@@ -169,6 +214,7 @@
 - Firefox:
   - Install Firefox
   - Sync Firefox
+  - Set never show: "set this as default browser"
   - Add search engine:
     - yt -> youtube
     - gh -> github
@@ -184,8 +230,18 @@
     - grammaryly
     - honey
     - notion
+    - twitter?
 - Intellij:
-  - Install Intellij?
+  - Install Intellij
+  ```bash
+  sudo snap install intellij-idea-community --classic
+  update-desktop-database
+  ```
+  - Manual config:
+    - Download vscode dark+ theme plugin
+    - Download code glance plugin
+    - Download JDK
+  - Setup sync settings: https://github.com/vitran96/IntellijSettings.git
 - Timeshift:
   - Install Timeshift
   ```bash
@@ -196,7 +252,15 @@
     - Backup:
       - Weekly - 3 backup
     - Exclude?
-    - Include?
+    - Include - **Ignore this**
+- Nala:
+  - Install nala
+  ```bash
+  sudo apt install nala
+
+  # update source list
+  sudo nala fetch
+  ```
 - Gnome Tweak:
   - Install gnome-tweak
   - Install Firefox with tweak extension -> Can we skip this?
@@ -231,7 +295,7 @@
   ```bash
   sudo apt install neovim
   ```
-  - Install plugin
+  - Install plugin manager?
   - Migrate config
   ```bash
   ln -s $HOME/.dotfiles/nvim $HOME/.config/nvim
@@ -242,7 +306,7 @@
 - qutebrowser:
   - Install qutebrowser
   - Migrate config
-- Cloud storate:
+- Cloud storate?:
   - Main GG Drive?
   - Main Onedrive?
   - Work Onedrive?
@@ -250,7 +314,15 @@
 - Other package:
   - nvm
   - snapd (snap)
+  - jdk?
+  - jabba (java version manager)?
   - build-essential
+  - heroku-cli?
+  - docker?
+  - k8s? k3s?
+  - python3?
+  - pip3?
+  - aws-cli-v2?
   - pcmanfm?
   - pfetch / neofetch?
   - gradle?
@@ -263,12 +335,10 @@
   - steam
   - nix package manager?
   - aptitude?
-  - nala?
   - deb-get?
   - exa?
   - blender?
-  - Some kind of screenshot application!!
-  - ansible
+  - ansible?
   - vagrant
   - virtual box
   - libvrt + virtual manager + qemu
