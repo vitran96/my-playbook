@@ -7,6 +7,7 @@
 # Manual step
 
 - Pop OS setting:
+  - Battery -> High Performance
   - migrate config?
     - pop-shell ($HOME/.config/pop-shell/config.json)
     - pop-system-updater ($HOME/.config/pop-system-updater/config.ron)
@@ -38,7 +39,6 @@
       - Add Vietnamese-Telex
     - Accessibility
       - Sound Keys
-      - Locate Pointer
     - Date & Time
       - Format 24-hour
 - Keyboard binding (can I somehow back this up or change from command line?):
@@ -325,7 +325,57 @@
   - Auto start
   - Set profile to Auto Balance (from online)
 - Aseprite:
-  - Build from source??
+  - Build from source
+  ```bash
+  # Dependacies
+  # Replace nala with apt if don't have nala
+  sudo nala install -y g++ clang libc++-dev libc++abi-dev cmake ninja-build libx11-dev libxcursor-dev libxi-dev libgl1-mesa-dev libfontconfig1-dev
+
+  cd $HOME
+  mkdir apps
+
+  mkdir app-repos
+  cd app-repos
+
+  # Clone dependancies
+  # depot_tools and skia
+  git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+  git clone -b aseprite-m102 https://github.com/aseprite/skia.git
+
+  export PATH="${PWD}/depot_tools:${PATH}"
+
+  # Build skia
+  cd skia
+  SKIA_DIR=$(pwd)
+  SKIA_BUILD_DIR=$SKIA_DIR/build
+  python tools/git-sync-deps
+  gn gen $SKIA_BUILD_DIR --args="is_debug=false is_official_build=true skia_use_system_expat=false skia_use_system_icu=false skia_use_system_libjpeg_turbo=false skia_use_system_libpng=false skia_use_system_libwebp=false skia_use_system_zlib=false skia_use_sfntly=false skia_use_freetype=true skia_use_harfbuzz=true skia_pdf_subset_harfbuzz=true skia_use_system_freetype2=false skia_use_system_harfbuzz=false"
+  ninja -C $SKIA_BUILD_DIR skia modules
+
+  # Clone aseprite
+  git clone --recursive https://github.com/aseprite/aseprite.git
+  cd aseprite
+
+  # Build aseprite
+  mkdir build
+  cd build
+
+  export CC=clang
+  export CXX=clang++
+  cmake \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_CXX_FLAGS:STRING=-stdlib=libc++ \
+    -DCMAKE_EXE_LINKER_FLAGS:STRING=-stdlib=libc++ \
+    -DLAF_BACKEND=skia \
+    -DSKIA_DIR=$SKIA_DIR \
+    -DSKIA_LIBRARY_DIR=$SKIA_BUILD_DIR \
+    -DSKIA_LIBRARY=$SKIA_BUILD_DIR/libskia.a \
+    -DCMAKE_INSTALL_PREFIX=$HOME/apps/aseprite \
+    -G Ninja \
+    ..
+  ninja aseprite
+  ninja install
+  ```
   - Clean up
 - qutebrowser:
   - Install qutebrowser
@@ -337,6 +387,7 @@
 - Other package:
   - build-essential
   - godot
+  - aptitude
   - snapd (snap)
   - Python tool:
     - python3
@@ -366,7 +417,9 @@
     - podman
     - docker?
     - k8s? k3s?
+  - htop? htim?
   - steam
+  - ranger? vifm?
   - discord
   - heroku-cli?
   - distrobox?
