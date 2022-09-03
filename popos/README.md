@@ -101,6 +101,7 @@
   ibus-daemon &
   ```
   - Turn off spell check
+  - Remove Emoji shortcut in `ibus-setup` > Advance
 - Fonts: https://github.com/ryanoasis/nerd-fonts
   - Install JetbrainsMono Nerd Font:
   ```bash
@@ -239,6 +240,7 @@
     - honey
     - notion
     - twitter?
+    - figma
 - Intellij:
   - Install Intellij
   ```bash
@@ -269,20 +271,6 @@
   # update source list
   sudo nala fetch
   ```
-- Gnome Tweak:
-  - Install gnome-tweak
-  - Install Firefox with tweak extension -> Can we skip this?
-  - Install extensions:
-    - Color picker: https://extensions.gnome.org/extension/3396/color-picker/
-    - Extension list: https://extensions.gnome.org/extension/3088/extension-list/
-    - GS Connect: https://extensions.gnome.org/extension/1319/gsconnect/
-    - Lock keys: https://extensions.gnome.org/extension/36/lock-keys/
-    - Clipboard indicator: https://extensions.gnome.org/extension/779/clipboard-indicator/
-    - Bluetooth quick connect: https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/
-    - Sound output, input device chooser: https://extensions.gnome.org/extension/906/sound-output-device-chooser/
-- Easy Effect:
-  - Auto start
-  - Set profile to Auto Balance (from online)
 - Doom-emacs:
   - Install Emacs
   ```bash
@@ -303,11 +291,37 @@
   ```bash
   sudo apt install neovim
   ```
-  - Install plugin manager?
+  - Install plugin manager
+  ```bash
+  # Install vim-plug
+  sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+  #
+  ```
   - Migrate config
   ```bash
   ln -s $HOME/.dotfiles/nvim $HOME/.config/nvim
   ```
+  - Execute VIM command in VIM:
+  ```
+  :PlugInstall
+  ```
+- Gnome Tweak:
+  - Install gnome-tweak
+  - Install Firefox with tweak extension (if not done)
+  - Install extensions:
+    - Color picker: https://extensions.gnome.org/extension/3396/color-picker/
+    - Extension list: https://extensions.gnome.org/extension/3088/extension-list/
+    - GS Connect: https://extensions.gnome.org/extension/1319/gsconnect/
+    - Lock keys: https://extensions.gnome.org/extension/36/lock-keys/
+    - Clipboard indicator: https://extensions.gnome.org/extension/779/clipboard-indicator/
+    - Bluetooth quick connect: https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/
+    - Sound output, input device chooser: https://extensions.gnome.org/extension/906/sound-output-device-chooser/
+- Flameshot
+- Easy Effect:
+  - Auto start
+  - Set profile to Auto Balance (from online)
 - Aseprite:
   - Build from source??
   - Clean up
@@ -318,44 +332,50 @@
   - Main GG Drive?
   - Main Onedrive?
   - Work Onedrive?
-- Flameshot
 - Other package:
-  - nvm
-  - snapd (snap)
-  - jdk?
-  - jabba (java version manager)?
   - build-essential
+  - godot
+  - snapd (snap)
+  - Python tool:
+    - python3
+    - pip3?
+  - Stream tool:
+    - obs
+    - kdenlive
+  - Design tool:
+    - gimp?
+    - inkscape?
+    - krita?
+    - blender?
+  - nvm
+  - Java tool?:
+    - jdk
+    - jabba (java version manager)
+    - gradle
+    - maven
+  - Virtual Machine tool:
+    - vagrant
+    - virtual box
+    - libvrt + virtual manager + qemu
+  - Compression tool
+    - zip
+    - unzip
+  - Container tool
+    - podman
+    - docker?
+    - k8s? k3s?
+  - steam
+  - discord
   - heroku-cli?
-  - docker?
-  - k8s? k3s?
-  - python3?
-  - pip3?
+  - distrobox?
   - aws-cli-v2?
   - pcmanfm?
   - pfetch / neofetch?
-  - gradle?
-  - maven?
-  - kdenlive
-  - gimp?
-  - inkscape?
-  - krita?
-  - obs
-  - steam
   - nix package manager?
-  - aptitude?
   - deb-get?
   - exa?
-  - blender?
   - ansible?
-  - vagrant
-  - virtual box
-  - libvrt + virtual manager + qemu
-  - podman
-  - distrobox?
-  - godot
-  - zip?
   - diffmerge tool?
-  - discord
   - wine? bottle?
   - warp?
   - Logitech Flow?
