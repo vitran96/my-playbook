@@ -91,6 +91,10 @@
     - t: -> execute command in terminal
     - : -> execute command in shell
     - = -> calculate an equation
+- **Fix Suspend** (does this work??)
+```bash
+sudo kernelstub -a "mem_sleep_default=deepi"
+```
 - Ibus-Unikey:
   - Install ibus-unikey:
   ```bash
