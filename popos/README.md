@@ -43,12 +43,13 @@
       - Format 24-hour
 - Keyboard binding (can I somehow back this up or change from command line?):
   - Normal mode
+    - Win == Win + / -> Launcher
     - Win + E -> File Explorer
     - Win + T -> Terminal
     - Win + B -> Browser
     - Win + Esc -> lock screen
-    - Win + S -> toggle stacking outside management mode??
-    - Win -> Launcher
+    - Win + O -> change window orientation (when tiling)
+    - Win + S -> toggle Stacking Mode for window
     - Win + Shift + H/L or Left/Right -> move window between Monitor
     - Win + Shift + J/K or Down/Up -> move window between workspace
     - Win + Shift + Home/End -> move window to 1st or last workspace
@@ -84,6 +85,12 @@
     - Ctrl + H/J/K/L or Left/Down/Up/Right -> swap window
   - Reserved by other application:
     - 1Password (look below)
+- PopOS Launcher:
+  - Shortcut:
+    - Ctrl + J/K -> scroll
+    - t: -> execute command in terminal
+    - : -> execute command in shell
+    - = -> calculate an equation
 - Ibus-Unikey:
   - Install ibus-unikey:
   ```bash
@@ -116,6 +123,7 @@
     - Timeshift
 - PopOS Shell:
   - Remove Window title bar
+  - Show hint
 - Git:
   - Install git
   - Config git with gh for authentication and ssh
