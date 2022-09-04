@@ -4,14 +4,18 @@
 
 1. Why I cannot update firmware??
 
+# Tool note
+
+- Use `xprop` to get running application class and title
+
 # Manual step
 
 ## Pop OS setting:
+- Copy monitor layout to gdm
 - Performance setting:
   - Plugged: High Performance
   - Battery: Balance
 - migrate config?
-  - pop-shell ($HOME/.config/pop-shell/config.json)
   - pop-system-updater ($HOME/.config/pop-system-updater/config.ron)
 - No launch dock
 - change wallpaper to Gura
@@ -89,9 +93,19 @@ can I somehow back this up or change from command line?
   - H/J/K/L or Left/Down/Up/Right -> move window position
   - Shift + H/J/K/L or Left/Down/Up/Right -> resize window
   - Ctrl + H/J/K/L or Left/Down/Up/Right -> swap window
-- Reserved by other application:
-  - 1Password (look below)
-- PopOS Launcher:
+- Other:
+  - 1Password:
+      - Win + \ -> 1password --show
+      - Win + Shift + \ -> 1password --lock
+      - Win + ] -> 1password --quick-access
+      - Win + Ctrl + \ -> 1password --silent
+  - Flameshot:
+    - Prt Sc -> flameshot gui
+    - Ctrl + Shift + Prt Sc -> flameshot screen -c -n 0
+  - Default screenshot tool:
+    - Alt + Prt Sc -> Record interactively
+
+## PopOS Launcher:
 - Shortcut:
   - Ctrl + J/K -> scroll
   - t: -> execute command in terminal
@@ -135,11 +149,12 @@ unzip "JetBrainsMono.zip" "*.ttf" "*.otf" -d $HOME/.local/share/fonts
 fc-cache $HOME/.local/share/fonts
 ```
 
-## PopOS Titling
-- Ignore floating:
-  - Settings
-  - PopOS Store
-  - Timeshift
+## Pop-shell
+- Migrate config
+```bash
+rm $HOME/.config/pop-shell/config.json
+ln -s $HOME/.config/pop-shell/config.json $HOME/.dotfiles/pop-shell/config.json
+```
 
 ## PopOS Shell:
 
@@ -244,12 +259,6 @@ curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --d
 sudo apt update
 sudo apt install 1password
 ```
-- Set up hotkey (exist inside $HOME/.config/1Password/settings/settings.json):
-  - Win + \ -> gui
-  - Win + Shift + \ -> lock
-  - Win + ] -> quick access
-  - Win + Ctrl + \ -> auto fill?
-- Auto start?
 
 ## Firefox:
 - Install Firefox
@@ -270,12 +279,15 @@ sudo apt install 1password
   - grammaryly
   - honey
   - notion
-  - twitter?
+  - twitter
+  - zalo?
   - figma
 
 ## Intellij:
 - Install Intellij
 ```bash
+sudo nala install snapd
+
 sudo snap install intellij-idea-community --classic
 update-desktop-database
 ```
@@ -350,6 +362,13 @@ ln -s $HOME/.dotfiles/nvim $HOME/.config/nvim
 ## Nautilus:
 - Show hidden file
 
+## nvm
+- Install nvm:
+```bash
+# TODO: does this need update?
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+```
+
 ## Aseprite:
 - Build from source
 ```bash
@@ -405,6 +424,31 @@ ninja install
 - Clean up?
 - Create .desktop file?
 
+## Flameshot
+- Install:
+```bash
+sudo nala install flameshot
+```
+- Config:
+```bash
+flameshot config -a true -t true
+```
+
+## godot
+
+<!-- TODO: consider build from source (https://docs.godotengine.org/en/latest/development/compiling/compiling_for_linuxbsd.html) -->
+- Install
+```bash
+# TODO: update godot package name
+sudo nala install godot3
+```
+- Migrate config
+```bash
+# TODO: maybe request or implement feature or make plugin to do setting sync
+# let's just copy for now
+cp $HOME/.dotfiles/Godot/editor_settings-3.tres
+```
+
 ## Gnome Tweak:
 - Install gnome-tweak
 - Install Firefox with tweak extension (if not done)
@@ -417,9 +461,6 @@ ninja install
   - Bluetooth quick connect: https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/
   - Sound output, input device chooser: https://extensions.gnome.org/extension/906/sound-output-device-chooser/
 
-## Flameshot
-<!-- TODO: -->
-
 ## Easy Effect:
 - Auto start
 - Set profile to Auto Balance (from online)
@@ -427,13 +468,6 @@ ninja install
 ## qutebrowser:
 - Install qutebrowser
 - Migrate config?
-
-## nvm
-- Install nvm:
-```bash
-# TODO: does this need update?
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-```
 
 ## Cloud storate?:
 - Main GG Drive?
@@ -443,9 +477,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 ## Other package:
 
 - build-essential
-- godot
 - aptitude
-- snapd (snap)
 - Python tool:
   - python3
   - python-is-python3
