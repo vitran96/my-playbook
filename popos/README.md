@@ -3,6 +3,7 @@
 # Notes
 
 1. Why I cannot update firmware??
+2. How to toggle title bar with cmd??
 
 # Tool note
 
@@ -425,17 +426,21 @@ ninja install
 - Create .desktop file?
 
 ## Flameshot
+<!-- TODO: consider backup config -->
 - Install:
 ```bash
 sudo nala install flameshot
 ```
-- Config:
-```bash
-flameshot config -a true -t true
-```
+- Config: default
 
 ## godot
 
+Godot does not play well with PopOS-Tiling
+When work with Godot:
+- Turn off Tiling
+- Turn on Title bar
+
+Installation:
 <!-- TODO: consider build from source (https://docs.godotengine.org/en/latest/development/compiling/compiling_for_linuxbsd.html) -->
 - Install
 ```bash
@@ -446,20 +451,29 @@ sudo nala install godot3
 ```bash
 # TODO: maybe request or implement feature or make plugin to do setting sync
 # let's just copy for now
-cp $HOME/.dotfiles/Godot/editor_settings-3.tres
+rm $HOME/.config/godot/editor_settings-3.tres
+cp $HOME/.dotfiles/Godot/editor_settings-3.tres $HOME/.config/godot/editor_settings-3.tres
 ```
 
 ## Gnome Tweak:
-- Install gnome-tweak
+- Install
+```bash
+sudo nala install gnome-tweaks
+```
 - Install Firefox with tweak extension (if not done)
 - Install extensions:
   - Color picker: https://extensions.gnome.org/extension/3396/color-picker/
-  - Extension list: https://extensions.gnome.org/extension/3088/extension-list/
   - GS Connect: https://extensions.gnome.org/extension/1319/gsconnect/
   - Lock keys: https://extensions.gnome.org/extension/36/lock-keys/
   - Clipboard indicator: https://extensions.gnome.org/extension/779/clipboard-indicator/
+    - Move to top after select
+    - No keybind
+    - No cofirmation on clear
+    - Size: 5
   - Bluetooth quick connect: https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/
   - Sound output, input device chooser: https://extensions.gnome.org/extension/906/sound-output-device-chooser/
+    - Hide if only 1
+    - Do not extend Menu to fit name
 
 ## Easy Effect:
 - Auto start
