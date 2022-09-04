@@ -4,6 +4,7 @@
 
 1. Why I cannot update firmware??
 2. How to toggle title bar with cmd??
+3. What is OSD notification?
 
 # Tool note
 
@@ -342,7 +343,8 @@ git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
 ```bash
 ln -s $HOME/.dotfiles/.doom.d $HOME/.doom.d
 ```
-- auto start server
+<!-- TODO: set up auto start -->
+- auto start server?
 
 ## Neo-vim:
 - Install neo-vim
@@ -426,7 +428,7 @@ cmake \
 ninja aseprite
 ninja install
 ```
-- Clean up?
+<!-- TODO: create .desktop -->
 - Create .desktop file?
 
 ## Flameshot
@@ -467,7 +469,11 @@ sudo nala install gnome-tweaks
 - Install Firefox with tweak extension (if not done)
 - Install extensions:
   - Color picker: https://extensions.gnome.org/extension/3396/color-picker/
+    - Keybind: Win + Shift + C
+    - Notification type: OSD
   - GS Connect: https://extensions.gnome.org/extension/1319/gsconnect/
+    - Set to move to Panel
+    - Install Firefox GSConnect extension
   - Lock keys: https://extensions.gnome.org/extension/36/lock-keys/
   - Clipboard indicator: https://extensions.gnome.org/extension/779/clipboard-indicator/
     - Move to top after select
@@ -487,6 +493,9 @@ sudo nala install gnome-tweaks
 - Install qutebrowser
 - Migrate config?
 
+## Fingerprint scan
+<!-- TODO: -->
+
 ## Cloud storate?:
 - Main GG Drive?
 - Main Onedrive?
@@ -494,12 +503,25 @@ sudo nala install gnome-tweaks
 
 ## Other package:
 
-- build-essential
-- aptitude
-- Python tool:
-  - python3
-  - python-is-python3
-  - pip3?
+- Dev tool:
+  - build-essential
+  - Python tool:
+    - python3
+    - python-is-python3
+    - pip3?
+  - Java tool?:
+    - jdk
+    - jabba (java version manager)
+    - gradle
+    - maven
+  - NodeJS:
+    - nvm
+    - npm
+    - nodejs
+  - postman?
+  - htop? htim?
+  - diffmerge tool?
+  - octave? (config https://gist.github.com/vitran96/debe1deeaf2601b0d48fad689f01a3ff)
 - Stream tool:
   - obs
   - kdenlive
@@ -508,16 +530,12 @@ sudo nala install gnome-tweaks
   - inkscape?
   - krita?
   - blender?
-- nvm
-- Java tool?:
-  - jdk
-  - jabba (java version manager)
-  - gradle
-  - maven
-- Virtual Machine tool:
+- Virtualize tool:
   - vagrant
   - virtual box
   - libvrt + virtual manager + qemu
+  - ansible?
+  - wine? bottle?
 - Compression tool
   - zip
   - unzip
@@ -525,24 +543,28 @@ sudo nala install gnome-tweaks
   - podman
   - docker?
   - k8s? k3s?
-- htop? htim?
-- steam
-- ranger? vifm?
-- discord
-- heroku-cli?
-- distrobox?
-- aws-cli-v2?
-- pcmanfm?
-- pfetch / neofetch?
-- nix package manager?
-- deb-get?
-- exa?
-- ansible?
-- diffmerge tool?
-- wine? bottle?
-- warp?
-- Logitech Flow?
-- octave? (config https://gist.github.com/vitran96/debe1deeaf2601b0d48fad689f01a3ff)
-- speedtest-cli?
-- lutris?
-- postman?
+  - distrobox?
+- Social media:
+  - discord
+- Gaming:
+  - steam
+  - lutris?
+- Filesystem:
+  - pcmanfm?
+  - ranger? vifm?
+  - exa?
+- Cloud service tool:
+  - heroku-cli?
+  - aws-cli-v2?
+- Package manager:
+  - flatpack
+  - something to handle AppImage?
+  - nix package manager?
+  - deb-get?
+- VPN:
+  - warp?
+  - 1password-cli 2?
+  - Logitech Flow?
+- Others:
+  - pfetch / neofetch?
+  - speedtest-cli?
