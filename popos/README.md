@@ -51,7 +51,7 @@
 
 ## Keyboard binding
 
-can I somehow back this up or change from command line?
+<!-- TODO: can I somehow back this up or change from command line? -->
 
 - Normal mode
   - Win == Win + / -> Launcher
@@ -164,11 +164,13 @@ ln -s $HOME/.config/pop-shell/config.json $HOME/.dotfiles/pop-shell/config.json
 
 ## Git:
 
+<!-- TODO: consider back up setting -->
 - Install git
 - Config git with gh for authentication and ssh
 
 ## GitHub CLI:
 
+<!-- TODO: consider back up setting -->
 - Install gh
 - migrate config? (can be found in $HOME/.config/gh/config.yml)
 - Setup:
@@ -306,16 +308,18 @@ update-desktop-database
     - Run code-clean up
 
 ## Timeshift:
-  - Install Timeshift
-  ```bash
-  sudo apt install timeshift
-  ```
-  - Config:
-    - Type: rsync (ext4)
-    - Backup:
-      - Weekly - 3 backup
-    - Exclude?
-    - Include - **Ignore this**
+<!-- TODO: update timeshift config -->
+- Install Timeshift
+```bash
+sudo apt install timeshift
+```
+- Config:
+  - Type: rsync (ext4)
+  - Backup:
+    - Weekly - 3 backup
+  - Exclude?
+  - Include - **Ignore this**
+
 ## Nala:
 - Install nala
 ```bash
