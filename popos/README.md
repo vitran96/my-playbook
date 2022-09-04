@@ -350,25 +350,6 @@ ln -s $HOME/.dotfiles/nvim $HOME/.config/nvim
 ## Nautilus:
 - Show hidden file
 
-## Gnome Tweak:
-- Install gnome-tweak
-- Install Firefox with tweak extension (if not done)
-- Install extensions:
-  - Color picker: https://extensions.gnome.org/extension/3396/color-picker/
-  - Extension list: https://extensions.gnome.org/extension/3088/extension-list/
-  - GS Connect: https://extensions.gnome.org/extension/1319/gsconnect/
-  - Lock keys: https://extensions.gnome.org/extension/36/lock-keys/
-  - Clipboard indicator: https://extensions.gnome.org/extension/779/clipboard-indicator/
-  - Bluetooth quick connect: https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/
-  - Sound output, input device chooser: https://extensions.gnome.org/extension/906/sound-output-device-chooser/
-
-## Flameshot
-<!-- TODO: -->
-
-## Easy Effect:
-- Auto start
-- Set profile to Auto Balance (from online)
-
 ## Aseprite:
 - Build from source
 ```bash
@@ -418,14 +399,34 @@ cmake \
   -DCMAKE_INSTALL_PREFIX=$HOME/apps/aseprite \
   -G Ninja \
   ..
-ninja -v aseprite
+ninja aseprite
 ninja install
 ```
-- Clean up
+- Clean up?
+- Create .desktop file?
+
+## Gnome Tweak:
+- Install gnome-tweak
+- Install Firefox with tweak extension (if not done)
+- Install extensions:
+  - Color picker: https://extensions.gnome.org/extension/3396/color-picker/
+  - Extension list: https://extensions.gnome.org/extension/3088/extension-list/
+  - GS Connect: https://extensions.gnome.org/extension/1319/gsconnect/
+  - Lock keys: https://extensions.gnome.org/extension/36/lock-keys/
+  - Clipboard indicator: https://extensions.gnome.org/extension/779/clipboard-indicator/
+  - Bluetooth quick connect: https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/
+  - Sound output, input device chooser: https://extensions.gnome.org/extension/906/sound-output-device-chooser/
+
+## Flameshot
+<!-- TODO: -->
+
+## Easy Effect:
+- Auto start
+- Set profile to Auto Balance (from online)
 
 ## qutebrowser:
 - Install qutebrowser
-- Migrate config
+- Migrate config?
 
 ## nvm
 - Install nvm:
