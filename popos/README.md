@@ -584,6 +584,7 @@ sudo nala install zip unzip
   - inkscape?
   - krita?
   - blender?
+  - lmms?
 - Virtualize tool:
   - vagrant
   - virtual box
