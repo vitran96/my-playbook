@@ -62,6 +62,7 @@ sudo nala install build-essential
 ## Keyboard binding
 
 <!-- TODO: can I somehow back this up or change from command line? -->
+<!-- TODO: Caps Lock -> ESC -->
 
 - Normal mode
   - Win == Win + / -> Launcher
