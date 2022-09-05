@@ -50,6 +50,15 @@
   - Date & Time
     - Format 24-hour
 
+## update
+
+```bash
+sudo nala update
+sudo nala upgrade
+
+sudo nala install build-essential
+```
+
 ## Keyboard binding
 
 <!-- TODO: can I somehow back this up or change from command line? -->
@@ -375,6 +384,7 @@ ln -s $HOME/.dotfiles/nvim $HOME/.config/nvim
 # TODO: does this need update?
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 ```
+- Install npm?
 
 ## Aseprite:
 - Build from source
@@ -474,6 +484,9 @@ sudo nala install gnome-tweaks
   - GS Connect: https://extensions.gnome.org/extension/1319/gsconnect/
     - Set to move to Panel
     - Install Firefox GSConnect extension
+    - Install KDE Connect on Phone
+    - Configure KDE Connect on Phone:
+      - Give permission for plugins
   - Lock keys: https://extensions.gnome.org/extension/36/lock-keys/
   - Clipboard indicator: https://extensions.gnome.org/extension/779/clipboard-indicator/
     - Move to top after select
@@ -484,6 +497,55 @@ sudo nala install gnome-tweaks
   - Sound output, input device chooser: https://extensions.gnome.org/extension/906/sound-output-device-chooser/
     - Hide if only 1
     - Do not extend Menu to fit name
+## steam
+
+- Install steam
+```bash
+sudo nala install steam
+```
+- Login
+- Config?
+
+## obs
+
+- Install
+```bash
+sudo nala install obs-studio
+```
+- Config?
+
+## discord
+
+- Install
+```bash
+sudo nala install discord
+```
+- Login
+- Config?
+
+## kdenlive
+
+- Install
+```bash
+sudo nala install kdenlive
+```
+- Config?
+
+## python
+
+- Install
+```bash
+sudo nala install python3 python-is-python3
+```
+
+## Compression tool
+
+```bash
+sudo nala install zip unzip
+```
+
+## Flatpak
+<!-- TODO: configure flatpak and flathub -->
 
 ## Easy Effect:
 - Auto start
@@ -504,27 +566,17 @@ sudo nala install gnome-tweaks
 ## Other package:
 
 - Dev tool:
-  - build-essential
   - Python tool:
-    - python3
-    - python-is-python3
     - pip3?
   - Java tool?:
     - jdk
     - jabba (java version manager)
     - gradle
     - maven
-  - NodeJS:
-    - nvm
-    - npm
-    - nodejs
   - postman?
   - htop? htim?
   - diffmerge tool?
   - octave? (config https://gist.github.com/vitran96/debe1deeaf2601b0d48fad689f01a3ff)
-- Stream tool:
-  - obs
-  - kdenlive
 - Design tool:
   - gimp?
   - inkscape?
@@ -536,19 +588,19 @@ sudo nala install gnome-tweaks
   - libvrt + virtual manager + qemu
   - ansible?
   - wine? bottle?
-- Compression tool
-  - zip
-  - unzip
 - Container tool
   - podman
   - docker?
   - k8s? k3s?
   - distrobox?
-- Social media:
-  - discord
 - Gaming:
-  - steam
+  - steamcmd?
   - lutris?
+  - moonlight?
+  - parsec?
+  - rainway?
+- Console Emulator:
+  - GBA: ?
 - Filesystem:
   - pcmanfm?
   - ranger? vifm?
@@ -557,7 +609,6 @@ sudo nala install gnome-tweaks
   - heroku-cli?
   - aws-cli-v2?
 - Package manager:
-  - flatpack
   - something to handle AppImage?
   - nix package manager?
   - deb-get?
