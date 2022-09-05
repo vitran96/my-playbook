@@ -115,6 +115,7 @@ sudo nala install build-essential
     - Ctrl + Shift + Prt Sc -> flameshot screen -c -n 0
   - Default screenshot tool:
     - Alt + Prt Sc -> Record interactively
+  - Clipboard indicator (look below)
 
 ## PopOS Launcher:
 - Shortcut:
