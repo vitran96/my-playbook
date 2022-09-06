@@ -13,8 +13,10 @@
 # Manual step
 
 ## Pop OS setting:
-<!-- TODO: Copy monitor layout-->
 - Copy monitor layout to gdm
+```bash
+sudo cp ~/.config/monitors.xml ~gdm/.config/
+```
 - Performance setting:
   - Plugged: High Performance
   - Battery: Balance
@@ -85,8 +87,7 @@ sudo nala install build-essential
   - Win + A -> application launcher
   - Win + Arrows -> change focus window
   - Win + Space <> Win + Shift + Space -> change language
-  - Win + V -> show notification
-  - Win + N -> focus active notification
+  - Win + N -> show notification
   - Win + M -> maximize or back to before
   - Win + Tab == Alt + Tab -> switch application
   - Alt + Esc -> switch window directly
@@ -350,13 +351,15 @@ sudo apt install emacs
 ```bash
 git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
+
+# autostart
+systemctl enable --user emacs
+systemctl start --user emacs
 ```
 - Migrate config
 ```bash
 ln -s $HOME/.dotfiles/.doom.d $HOME/.doom.d
 ```
-<!-- TODO: set up auto start -->
-- auto start server?
 
 ## Neo-vim:
 - Install neo-vim
@@ -384,10 +387,8 @@ ln -s $HOME/.dotfiles/nvim $HOME/.config/nvim
 ## nvm
 - Install nvm:
 ```bash
-# TODO: does this need update?
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 ```
-- Install npm?
 
 ## Aseprite:
 - Build from source
@@ -441,16 +442,20 @@ cmake \
 ninja aseprite
 ninja install
 ```
-<!-- TODO: create .desktop -->
-- Create .desktop file?
+- .desktop file
+```bash
+ln -s $HOME/.dotfiles/linux/desktop/Aseprite.desktop $HOME/.local/share/applications/Aseprite.desktop
+```
 
 ## Flameshot
-<!-- TODO: consider backup config -->
 - Install:
 ```bash
 sudo nala install flameshot
 ```
-- Config: default
+- Config
+```bash
+ln -s $HOME/.dotfiles/flameshot $HOME/.config/flameshot
+```
 
 ## godot
 
@@ -463,7 +468,6 @@ Installation:
 <!-- TODO: consider build from source (https://docs.godotengine.org/en/latest/development/compiling/compiling_for_linuxbsd.html) -->
 - Install
 ```bash
-# TODO: update godot package name
 sudo nala install godot3
 ```
 - Migrate config
@@ -500,22 +504,19 @@ sudo nala install gnome-tweaks
   - Sound output, input device chooser: https://extensions.gnome.org/extension/906/sound-output-device-chooser/
     - Hide if only 1
     - Do not extend Menu to fit name
-## steam
 
+## steam
 - Install steam
 ```bash
 sudo nala install steam
 ```
 - Login
-- Config?
 
 ## obs
-
 - Install
 ```bash
 sudo nala install obs-studio
 ```
-- Config?
 
 ## discord
 
@@ -524,7 +525,6 @@ sudo nala install obs-studio
 sudo nala install discord
 ```
 - Login
-- Config?
 
 ## kdenlive
 
@@ -532,34 +532,106 @@ sudo nala install discord
 ```bash
 sudo nala install kdenlive
 ```
-- Config?
 
 ## python
-
+<!-- python3 is installed by default -->
 - Install
 ```bash
 sudo nala install python3 python-is-python3
 ```
 
 ## Compression tool
-
+<!-- zip, unzip is installed by default -->
 ```bash
 sudo nala install zip unzip
 ```
 
 ## Flatpak
-<!-- TODO: configure flatpak and flathub -->
-
-## Easy Effect:
-- Auto start
-- Set profile to Auto Balance (from online)
+<!-- flatpak and flathub setup is done by default -->
 
 ## qutebrowser:
 - Install qutebrowser
-- Migrate config?
+```bash
+sudo nala install qutebrowser
+```
+- Migrate config
+```bash
+ln -s $HOME/.dotfiles/qutebrowser $HOME/.config/qutebrowser
+```
+
+## Easy Effect:
+- Install
+```bash
+flatpak install flathub com.github.wwmm.easyeffects
+```
+- Config
+  - Autostart
+  - Do not shutdown on closing
+<!-- TODO: setup easy effect -->
+- Set profile to Auto Balance (from online)
+
+## Container tool
+<!-- TODO: find away to pull docker.io/... without remembering docker.io -->
+- Install
+```bash
+sudo nala install podman
+```
+
+## Virtualize tool:
+- Install
+```bash
+sudo nala install cpu-checker
+sudo nala install vagrant virtualbox
+
+# qemu libvrd
+sudo nala install qemu-kvm virt-manager libvirt-daemon-system virtinst libvirt-clients bridge-utils
+
+# Start libvirtd service
+sudo systemctl enable --now libvirtd
+sudo systemctl start libvirtd
+
+# Confirm libvirtd is run
+sudo systemctl status libvirtd
+
+# Set right
+sudo usermod -aG kvm $USER
+sudo usermod -aG libvirt $USER
+```
+- Setup bridge (optinal)
+```bash
+# network:
+#   ethernets:
+#     enp0s3:
+#       dhcp4: false
+#       dhcp6: false
+#   # add configuration for bridge interface
+#   bridges:
+#     br0:
+#       interfaces: [enp0s3]
+#       dhcp4: false
+#       addresses: [192.168.1.162/24]
+#       macaddress: 08:00:27:4b:1d:45
+#       routes:
+#         - to: default
+#           via: 192.168.1.1
+#           metric: 100
+#       nameservers:
+#         addresses: [4.2.2.2]
+#       parameters:
+#         stp: false
+#       dhcp6: false
+#   version: 2
+sudo vi /etc/netplan/01-netcfg.yaml
+
+sudo netplan apply
+
+ip add show
+
+```
 
 ## Fingerprint scan
 <!-- TODO: -->
+
 
 ## Cloud storate?:
 - Main GG Drive?
@@ -587,13 +659,9 @@ sudo nala install zip unzip
   - blender?
   - lmms?
 - Virtualize tool:
-  - vagrant
-  - virtual box
-  - libvrt + virtual manager + qemu
   - ansible?
   - wine? bottle?
 - Container tool
-  - podman
   - podmon-toolbox?
   - docker?
   - k8s? k3s?
