@@ -13,6 +13,7 @@
 # Manual step
 
 ## Pop OS setting:
+<!-- TODO: Copy monitor layout-->
 - Copy monitor layout to gdm
 - Performance setting:
   - Plugged: High Performance
@@ -593,6 +594,7 @@ sudo nala install zip unzip
   - wine? bottle?
 - Container tool
   - podman
+  - podmon-toolbox?
   - docker?
   - k8s? k3s?
   - distrobox?
@@ -619,6 +621,10 @@ sudo nala install zip unzip
   - warp?
   - 1password-cli 2?
   - Logitech Flow?
+- IDE / Text editor to check:
+  - LunarVim?
+  - Doom-nvim?
+  - Spacevim?
 - Others:
   - pfetch / neofetch?
   - speedtest-cli?
