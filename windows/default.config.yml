@@ -46,6 +46,7 @@ choco_packages:
   # - name: thunderbird
   #   params: /NoDesktopShortcut
   - 7zip
+  - openssl
   # - anydesk
   # - filezilla
   # - hwmonitor
