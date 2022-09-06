@@ -615,7 +615,7 @@ sudo nala install zip unzip
   - aws-cli-v2?
 - Package manager:
   - something to handle AppImage?
-  - nix package manager?
+  - nix package manager? devbox?
   - deb-get?
 - VPN:
   - warp?
