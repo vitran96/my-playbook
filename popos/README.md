@@ -62,10 +62,9 @@ sudo nala upgrade
 sudo nala install build-essential
 ```
 
-## Keyboard binding
+## PopOS - Keyboard binding
 
 <!-- TODO: can I somehow back this up or change from command line? -->
-<!-- TODO: Caps Lock -> ESC -->
 
 - Normal mode
   - Win == Win + / -> Launcher
@@ -119,6 +118,12 @@ sudo nala install build-essential
   - Default screenshot tool:
     - Alt + Prt Sc -> Record interactively
   - Clipboard indicator (look below)
+
+# My Key Mapping
+- Swap caps and escape
+```bash
+gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
+```
 
 ## PopOS Launcher:
 - Shortcut:
@@ -176,27 +181,31 @@ ln -s $HOME/.config/pop-shell/config.json $HOME/.dotfiles/pop-shell/config.json
 - Remove Window title bar
 - Show hint
 
-## Git:
-
-<!-- TODO: consider back up setting -->
-- Install git
-- Config git with gh for authentication and ssh
-
-## GitHub CLI:
-
-<!-- TODO: consider back up setting -->
-- Install gh
-- migrate config? (can be found in $HOME/.config/gh/config.yml)
+## Git + GitHub CLI:
+- migrate config
+```bash
+mkdir -p $HOME/.config/gh/
+ln -s $HOME/.dotfiles/gh/config.yml $HOME/.config/gh/config.yml
+```
+- Install git + gh
+```bash
+sudo nala install git gh
+```
 - Setup:
 ```bash
-# use SSH
+# Config git with gh for authentication and ssh
 gh auth login
+
 gh auth setup-git
 ```
 
 ## zsh:
-
-- example config: https://gitlab.com/dtos/etc/dtos-zsh/-/blob/main/etc/dtos/.zshrc
+ <!-- example config: https://gitlab.com/dtos/etc/dtos-zsh/-/blob/main/etc/dtos/.zshrc -->
+- migrate my configuration
+```bash
+ln -s $HOME/.dotfiles/linux/.zshrc $HOME/.zshrc
+ln -s $HOME/.dotfiles/linux/.p10k.zsh $HOME/.p10k.zsh
+```
 - install zsh:
 ```bash
 sudo apt install zsh
@@ -212,11 +221,6 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 - install powerlevel10k
 ```bash
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-```
-- migrate my configuration
-```bash
-ln -s $HOME/.dotfiles/linux/.zshrc $HOME/.zshrc
-ln -s $HOME/.dotfiles/linux/.p10k.zsh $HOME/.p10k.zsh
 ```
 
 ## bashrc
@@ -332,7 +336,7 @@ sudo apt install timeshift
   - Backup:
     - Weekly - 3 backup
   - Exclude?
-  - Include - **Ignore this**
+  - Include?
 
 ## Nala:
 - Install nala
@@ -567,8 +571,16 @@ flatpak install flathub com.github.wwmm.easyeffects
 - Config
   - Autostart
   - Do not shutdown on closing
-<!-- TODO: setup easy effect -->
-- Set profile to Auto Balance (from online)
+- Set profile to Auto Balance:
+  - Set up LoudnessEqualizer
+  ```bash
+  cp $HOME/.dotfiles/easyeffect/LoudnessEqualizer.json $HOME/.var/app/com.github.wwmm.easyeffects/config/easyeffects/output/
+  ```
+  - Open EasyEffect
+  - Output > Preset > Load LoudnessEqualizer.json
+  - Pipewire > Preset Autoloading > Set audio output for preset
+
+<!-- TODO: check out cadence? and carla? -->
 
 ## Container tool
 <!-- TODO: find away to pull docker.io/... without remembering docker.io -->
@@ -652,6 +664,8 @@ ip add show
   - htop? htim?
   - diffmerge tool?
   - octave? (config https://gist.github.com/vitran96/debe1deeaf2601b0d48fad689f01a3ff)
+  - entr(run)?
+  - bat?
 - Design tool:
   - gimp?
   - inkscape?
