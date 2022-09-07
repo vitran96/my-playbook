@@ -120,9 +120,10 @@ sudo nala install build-essential
   - Clipboard indicator (look below)
 
 # My Key Mapping
+<!-- TODO: find a better way to configure key map / key bind -->
 - Swap caps and escape
 ```bash
-gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
+gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape_shifted_capslock']"
 ```
 
 ## PopOS Launcher:
@@ -642,8 +643,7 @@ ip add show
 ```
 
 ## Fingerprint scan
-<!-- TODO: -->
-
+<!-- I cannot find a way to do this. Fail to setup for DELL Inspiron 5000 -->
 
 ## Cloud storate?:
 - Main GG Drive?
