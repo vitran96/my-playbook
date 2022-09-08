@@ -59,8 +59,10 @@ cinst -y postgresql13 --params /Password:admin
 - Create powershell task:
   - change oh-my-posh task to powershell task
   - Install PS module:
-    - Window Update: `Install-Module PSWindowsUpdate`
+    - Window Update: `Install-Module PSWindowsUpdate -Scope CurrentUser`
     - PSReadLine: `Install-Module PSReadLine -Force -Scope CurrentUser`
+    - Terminal-Icons: `Install-Module Terminal-Icons -Scope CurrentUser`
+    - PSFzf: `Install-Module PSFzf -Scope CurrentUser` + choco install fzf
 - Setup godot setting at: `%APPDATA%/Godot`
 - How to install Office 365 from cmd?
 - `winget` must be install from MSStore: AppInstaller. Is it possible to udpate App Installer with Ansible???
