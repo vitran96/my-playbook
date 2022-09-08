@@ -52,7 +52,7 @@ cinst -y postgresql13 --params /Password:admin
 ```
 
 ## TODO
-- Remove `Nuget.config` after choco / winget package installation
+- Remove `Nuget.config` after choco / winget package installation (%APPDATA%\NuGet\nuget.config)
 - Create powershell task:
   - change oh-my-posh task to powershell task
   - Install PS module:
