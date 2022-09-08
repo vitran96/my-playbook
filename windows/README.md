@@ -52,10 +52,6 @@ cinst -y postgresql13 --params /Password:admin
 ```
 
 ## TODO
-
-- Create setup alacritty task
-  - alacritty config is at: %APPDATA%\alacritty\alacritty.yml
-  - fix error "%V" -> "%V in Computer\HKEY_CLASSES_ROOT\Directory\Background\shell\Open Alacritty here\command
 - Create powershell task:
   - change oh-my-posh task to powershell task
   - Install PS module:
@@ -90,6 +86,9 @@ cinst -y postgresql13 --params /Password:admin
 - cannot install postgres with param
 - can i set these setting from command line or ansible? :
   - change backgroud picture
+  - personalization:
+    - Acccent color: Yellow Gold
+    - Show accent color on windows bar and title
   - set Dark mode
   - turn on storage sense. set up storage sense:
     - run every week
