@@ -2,7 +2,6 @@
 
 # Notes
 
-1. Why I cannot update firmware??
 2. How to toggle title bar with cmd??
 3. What is OSD notification?
 
@@ -319,12 +318,19 @@ update-desktop-database
   - Download JDK
 - Setup sync settings: https://github.com/vitran96/IntellijSettings.git
 - Other settings:
-  - Keymap: vscode copy
+  - Keymap: vscode copy (or Vim)
   - Tools > Actions on save:
     - Reformat code
     - Optimize import
     - Re-arrange code
     - Run code-clean up
+- For IdeaVim:
+  - Install Vim plugin
+  - Set up configuration file:
+  ```bash
+  ln -s $HOME/.dotfiles/vim/.vimrc $HOME/.vimrc
+  ln -s $HOME/.dotfiles/idea/.ideavimrc $HOME/.ideavimrc
+  ```
 
 ## Timeshift:
 <!-- TODO: update timeshift config -->
@@ -354,8 +360,8 @@ sudo apt install emacs
 ```
 - Install Doom-emacs
 ```bash
-git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
-~/.emacs.d/bin/doom install
+git clone --depth 1 https://github.com/doomemacs/doomemacs $HOME/.emacs.d
+$HOME/.emacs.d/bin/doom install
 
 # autostart
 systemctl enable --user emacs
@@ -644,6 +650,16 @@ ip add show
 
 ## Fingerprint scan
 <!-- I cannot find a way to do this. Fail to setup for DELL Inspiron 5000 -->
+
+## Spotify
+- Install
+```bash
+curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add -
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+
+sudo nala update
+sudo nala install spotify-client
+```
 
 ## Cloud storate?:
 - Main GG Drive?
