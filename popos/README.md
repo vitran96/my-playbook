@@ -136,7 +136,6 @@ gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape_shifted
 
 It seems that kernel 5.8+ does not work well with PopOS
 
-<!-- TODO: does this work?? -->
 ```bash
 sudo kernelstub -a "mem_sleep_default=deepi"
 ```
