@@ -670,6 +670,11 @@ curl -L https://nixos.org/nix/install | sh
 # Elm
 https://github.com/elm/compiler/blob/master/installers/linux/README.md
 
+# Haskell Stack build tool
+```bash
+curl -sSL https://get.haskellstack.org/ | sh
+```
+
 ## Cloud storate?:
 - Main GG Drive?
 - Main Onedrive?
