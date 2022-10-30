@@ -675,6 +675,13 @@ https://github.com/elm/compiler/blob/master/installers/linux/README.md
 curl -sSL https://get.haskellstack.org/ | sh
 ```
 
+# Jetbrain's Toolbox
+
+1. Download from Jetbrain site
+2. Untar
+3. Start the App
+4. Create folder at `$HOME/.local/share/JetBrains/Toolbox/scripts`
+
 ## Cloud storate?:
 - Main GG Drive?
 - Main Onedrive?
