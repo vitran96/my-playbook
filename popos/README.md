@@ -682,6 +682,13 @@ curl -sSL https://get.haskellstack.org/ | sh
 3. Start the App
 4. Create folder at `$HOME/.local/share/JetBrains/Toolbox/scripts`
 
+# Install Jabba (Java version manager) ??
+1. Install Jabba
+```bash
+export JABBA_VERSION=...
+curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.jabba/jabba.sh
+```
+
 ## Cloud storate?:
 - Main GG Drive?
 - Main Onedrive?
