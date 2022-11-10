@@ -682,7 +682,10 @@ curl -sSL https://get.haskellstack.org/ | sh
 3. Start the App
 4. Create folder at `$HOME/.local/share/JetBrains/Toolbox/scripts`
 
-# Install Jabba (Java version manager) ??
+# 1Password CLI??
+<!-- TODO -->
+
+# Jabba (Java version manager) ??
 1. Install Jabba
 ```bash
 export JABBA_VERSION=...
