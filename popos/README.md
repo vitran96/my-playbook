@@ -685,12 +685,47 @@ curl -sSL https://get.haskellstack.org/ | sh
 # 1Password CLI??
 <!-- TODO -->
 
-# Jabba (Java version manager) ??
+# Jabba (Java version manager)
 1. Install Jabba
 ```bash
-export JABBA_VERSION=...
+export JABBA_VERSION=0.11.2
 curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.jabba/jabba.sh
 ```
+2. Install Java
+```bash
+jabba install openjdk-ri@1.8
+jabba use openjdk-ri@1.8
+jabba alias default openjdk-ri@1.8
+```
+
+# Maven
+1. Install Maven
+```bash
+sudo nala install maven
+```
+
+# SDKMAN
+https://sdkman.io/install
+1. Install SDKMAN
+```bash
+curl -s "https://get.sdkman.io" | bash
+```
+
+# Sprint boot
+1. Install via SDKMAN
+```bash
+sdk install springboot 2.2.4@RELEASE
+```
+
+# .Net Core + ASP.NET
+
+# Rust
+
+# Zoom
+
+# MS Teams
+
+# MS Edge
 
 ## Cloud storate?:
 - Main GG Drive?
@@ -703,10 +738,7 @@ curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.ja
   - Python tool:
     - pip3?
   - Java tool?:
-    - jdk
-    - jabba (java version manager)
     - gradle
-    - maven
   - postman?
   - htop? htim?
   - diffmerge tool?
