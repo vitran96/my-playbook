@@ -685,6 +685,9 @@ curl -sSL https://get.haskellstack.org/ | sh
 # 1Password CLI??
 <!-- TODO -->
 
+# Figma Linux
+<!-- TODO -->
+
 # Jabba (Java version manager) - optional (since this might not work with spring boot cli)
 1. Install Jabba
 ```bash
