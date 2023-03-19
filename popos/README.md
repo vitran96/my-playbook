@@ -685,7 +685,7 @@ curl -sSL https://get.haskellstack.org/ | sh
 # 1Password CLI??
 <!-- TODO -->
 
-# Jabba (Java version manager)
+# Jabba (Java version manager) - optional (since this might not work with spring boot cli)
 1. Install Jabba
 ```bash
 export JABBA_VERSION=0.11.2
@@ -714,7 +714,13 @@ curl -s "https://get.sdkman.io" | bash
 # Sprint boot
 1. Install via SDKMAN
 ```bash
-sdk install springboot 2.2.4@RELEASE
+sdk install springboot 2.2.4.RELEASE
+```
+
+# Java via SDKMAN
+1. Install Java
+```bash
+sdk install java 8.0.302-open
 ```
 
 # .Net Core + ASP.NET
