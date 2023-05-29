@@ -739,6 +739,8 @@ Deb from link: https://www.remotepc.com/remote-access-linux
 
 # MS Edge
 
+# 1password cli
+
 ## Cloud storate?:
 - Main GG Drive?
 - Main Onedrive?
