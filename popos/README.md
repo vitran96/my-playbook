@@ -741,6 +741,9 @@ Deb from link: https://www.remotepc.com/remote-access-linux
 
 # 1password cli
 
+# Deb-get
+https://github.com/vitran96/deb-get
+
 ## Cloud storate?:
 - Main GG Drive?
 - Main Onedrive?
@@ -791,7 +794,6 @@ Deb from link: https://www.remotepc.com/remote-access-linux
 - Package manager:
   - something to handle AppImage?
   - nix package manager? devbox?
-  - deb-get?
 - VPN:
   - warp?
   - 1password-cli 2?
