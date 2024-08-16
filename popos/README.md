@@ -762,6 +762,7 @@ https://github.com/vitran96/deb-get
   - octave? (config https://gist.github.com/vitran96/debe1deeaf2601b0d48fad689f01a3ff)
   - entr(run)?
   - bat?
+  - bruno (https://www.usebruno.com/downloads)
 - Design tool:
   - gimp?
   - inkscape?
