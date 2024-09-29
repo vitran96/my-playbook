@@ -741,6 +741,23 @@ Deb from link: https://www.remotepc.com/remote-access-linux
 
 # 1password cli
 
+# ZeroTier
+
+https://www.zerotier.com/download/#entry-5
+
+```bash
+curl -s 'https://raw.githubusercontent.com/zerotier/ZeroTierOne/main/doc/contact%40zerotier.com.gpg' | gpg --import && \  
+if z=$(curl -s 'https://install.zerotier.com/' | gpg); then echo "$z" | sudo bash; fi
+```
+
+# Moonlight
+
+https://github.com/moonlight-stream/moonlight-qt/releases
+
+```bash
+sudo snap install moonlight
+```
+
 # Deb-get
 https://github.com/vitran96/deb-get
 
