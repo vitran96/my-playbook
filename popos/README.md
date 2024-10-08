@@ -768,6 +768,15 @@ https://github.com/vitran96/deb-get
 
 https://www.usebruno.com/downloads
 
+# ansible
+
+# gem + rubyenv + ruby
+
+<!-- NOTE: this was installed because of vagrant installation failure -->
+
+# qemu + kvm
+
+
 ## Cloud storate?:
 - Main GG Drive?
 - Main Onedrive?
@@ -821,12 +830,6 @@ https://www.usebruno.com/downloads
   - nix package manager? devbox?
 - VPN:
   - warp
-  - 1password-cli 2?
-  - Logitech Flow?
 - IDE / Text editor to check:
-  - LunarVim?
-  - Doom-nvim?
-  - Spacevim
 - Others:
   - pfetch / neofetch?
-  - speedtest-cli?
