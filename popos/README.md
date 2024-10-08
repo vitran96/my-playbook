@@ -303,7 +303,8 @@ sudo apt install 1password
   - zalo?
   - figma
 
-## Intellij:
+## Intellij (removed)
+<!-- NOTE: now managed via toolbox -->
 - Install Intellij
 ```bash
 sudo nala install snapd
@@ -352,7 +353,7 @@ sudo apt install nala
 # update source list
 sudo nala fetch
 ```
-# Doom-emacs:
+# Doom-emacs (removed)
 - Install Emacs
 ```bash
 sudo apt install emacs
@@ -528,7 +529,7 @@ sudo nala install steam
 sudo nala install obs-studio
 ```
 
-## discord
+## discord (removed)
 
 - Install
 ```bash
@@ -536,7 +537,7 @@ sudo nala install discord
 ```
 - Login
 
-## kdenlive
+## kdenlive (removed)
 
 - Install
 ```bash
@@ -545,6 +546,8 @@ sudo nala install kdenlive
 
 ## python
 <!-- python3 is installed by default -->
+
+<!-- NOTE: use pyenv instead -->
 - Install
 ```bash
 sudo nala install python3 python-is-python3
@@ -559,7 +562,7 @@ sudo nala install zip unzip
 ## Flatpak
 <!-- flatpak and flathub setup is done by default -->
 
-## qutebrowser:
+## qutebrowser (removed)
 - Install qutebrowser
 ```bash
 sudo nala install qutebrowser
@@ -588,7 +591,7 @@ flatpak install flathub com.github.wwmm.easyeffects
 
 <!-- TODO: check out cadence? and carla? -->
 
-## Container tool
+## Container tool - podman (removed)
 <!-- TODO: find away to pull docker.io/... without remembering docker.io -->
 - Install
 ```bash
@@ -650,7 +653,7 @@ ip add show
 ## Fingerprint scan
 <!-- I cannot find a way to do this. Fail to setup for DELL Inspiron 5000 -->
 
-## Spotify
+## Spotify (removed)
 - Install
 ```bash
 curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add -
@@ -667,10 +670,10 @@ sudo install -d -m755 -o $(id -u) -g $(id -g) /nix
 curl -L https://nixos.org/nix/install | sh
 ```
 
-# Elm
+# Elm (removed)
 https://github.com/elm/compiler/blob/master/installers/linux/README.md
 
-# Haskell Stack build tool
+# Haskell Stack build tool (removed)
 ```bash
 curl -sSL https://get.haskellstack.org/ | sh
 ```
@@ -682,13 +685,10 @@ curl -sSL https://get.haskellstack.org/ | sh
 3. Start the App
 4. Create folder at `$HOME/.local/share/JetBrains/Toolbox/scripts`
 
-# 1Password CLI??
+# Figma Linux (removed)
 <!-- TODO -->
 
-# Figma Linux
-<!-- TODO -->
-
-# Jabba (Java version manager) - optional (since this might not work with spring boot cli)
+# Jabba (Java version manager) - optional (since this might not work with spring boot cli) (removed)
 1. Install Jabba
 ```bash
 export JABBA_VERSION=0.11.2
@@ -704,7 +704,6 @@ jabba alias default openjdk-ri@1.8
 # Maven
 1. Install Maven
 ```bash
-sudo nala install maven
 ```
 
 # SDKMAN
@@ -733,13 +732,17 @@ Deb from link: https://www.remotepc.com/remote-access-linux
 
 # Rust
 
-# Zoom
+# Zoom (removed)
 
-# MS Teams
+# MS Teams (removed)
 
-# MS Edge
+# MS Edge (removed)
 
 # 1password cli
+
+```shell
+op --help
+```
 
 # ZeroTier
 
@@ -760,6 +763,10 @@ sudo snap install moonlight
 
 # Deb-get
 https://github.com/vitran96/deb-get
+
+# Bruno (removed)
+
+https://www.usebruno.com/downloads
 
 ## Cloud storate?:
 - Main GG Drive?
@@ -787,7 +794,7 @@ https://github.com/vitran96/deb-get
   - blender?
   - lmms?
 - Virtualize tool:
-  - ansible?
+  - ansible
   - wine? bottle?
 - Container tool
   - podmon-toolbox?
@@ -813,13 +820,13 @@ https://github.com/vitran96/deb-get
   - something to handle AppImage?
   - nix package manager? devbox?
 - VPN:
-  - warp?
+  - warp
   - 1password-cli 2?
   - Logitech Flow?
 - IDE / Text editor to check:
   - LunarVim?
   - Doom-nvim?
-  - Spacevim?
+  - Spacevim
 - Others:
   - pfetch / neofetch?
   - speedtest-cli?
