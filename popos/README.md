@@ -728,6 +728,14 @@ sdk install java 8.0.302-open
 # RemotePC Viewer
 Deb from link: https://www.remotepc.com/remote-access-linux
 
+# Clojure
+
+```bash
+curl -L -O https://github.com/clojure/brew-install/releases/latest/download/linux-install.sh
+chmod +x linux-install.sh
+sudo ./linux-install.sh
+```
+
 # .Net Core + ASP.NET
 
 # Rust
