@@ -790,6 +790,12 @@ https://www.usebruno.com/downloads
 - Main Onedrive?
 - Work Onedrive?
 
+# Git LFS
+
+```bash
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+```
+
 ## Other package:
 
 - Dev tool:
