@@ -725,7 +725,7 @@ sdk install springboot 2.2.4.RELEASE
 sdk install java 8.0.302-open
 ```
 
-# RemotePC Viewer
+# RemotePC Viewer (NOT USED)
 Deb from link: https://www.remotepc.com/remote-access-linux
 
 # Clojure
@@ -740,11 +740,11 @@ sudo ./linux-install.sh
 
 # Rust
 
-# Zoom (removed)
+# Zoom (NOT USED)
 
-# MS Teams (removed)
+# MS Teams (NOT USED)
 
-# MS Edge (removed)
+# MS Edge (NOT USED)
 
 # 1password cli
 
@@ -752,7 +752,7 @@ sudo ./linux-install.sh
 op --help
 ```
 
-# ZeroTier
+# ZeroTier (NOT USED)
 
 https://www.zerotier.com/download/#entry-5
 
@@ -772,7 +772,7 @@ sudo snap install moonlight
 # Deb-get
 https://github.com/vitran96/deb-get
 
-# Bruno (removed)
+# Bruno (NOT USED)
 
 https://www.usebruno.com/downloads
 
@@ -785,7 +785,7 @@ https://www.usebruno.com/downloads
 # qemu + kvm
 
 
-## Cloud storate?:
+## Cloud storate (NOT USED)
 - Main GG Drive?
 - Main Onedrive?
 - Work Onedrive?
@@ -794,6 +794,18 @@ https://www.usebruno.com/downloads
 
 ```bash
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+```
+
+# Deno
+
+```bash
+curl -fsSL https://deno.land/install.sh | sh
+```
+
+# MISE en place
+
+```bash
+curl https://mise.run | sh
 ```
 
 ## Other package:
