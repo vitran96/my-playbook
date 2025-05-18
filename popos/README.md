@@ -761,7 +761,7 @@ curl -s 'https://raw.githubusercontent.com/zerotier/ZeroTierOne/main/doc/contact
 if z=$(curl -s 'https://install.zerotier.com/' | gpg); then echo "$z" | sudo bash; fi
 ```
 
-# Moonlight
+# Moonlight (NOT USED)
 
 https://github.com/moonlight-stream/moonlight-qt/releases
 
@@ -772,7 +772,7 @@ sudo snap install moonlight
 # Deb-get
 https://github.com/vitran96/deb-get
 
-# Bruno (NOT USED)
+# Bruno (REMOVED)
 
 https://www.usebruno.com/downloads
 
@@ -806,6 +806,15 @@ curl -fsSL https://deno.land/install.sh | sh
 
 ```bash
 curl https://mise.run | sh
+```
+
+# Love2D
+
+https://love2d.org/wiki/Getting_Started
+
+```bash
+sudo add-apt-repository ppa:bartbes/love-stable
+sudo apt update
 ```
 
 ## Other package:
