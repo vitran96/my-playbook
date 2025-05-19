@@ -5,6 +5,7 @@
 ### Init
 - [x] Enble nix-flake
 - [x] Enable nix home-manager: https://nix-community.github.io/home-manager/#sec-install-nixos-module
+- [ ] Setup GPG for signing commit
 
 ### System packages
 - [x] zsh
@@ -12,23 +13,23 @@
 - [x] git
 - [x] wget
 - [x] podman & podman docker alias
-- [ ] anydesk
 - [ ] Vietnamese keyboard (telex)
+- [x] Steam
+- [x] Logitech device manager: https://github.com/pwr-Solaar/Solaar
 
 ### User packages
 - [x] VS Code
-- [ ] Jetbrain Toolsbox
-- [x] Godot game engine
-- [ ] Steam
-- [ ] Logitech device manager: https://github.com/pwr-Solaar/Solaar
+- [x] Love2D
 - [ ] emacs & spacemacs: https://ironshark.org/posts/2024-06-rethinkrefactorrebuild-3/
-- [ ] nvim plugin
+- [x] vim-plug
 - [x] github cli
-- [ ] dbeaver
-- [ ] 1password & 1password-cli
-- [ ] warp
-- [ ] wez-term
-- [ ] zim
+- [x] dbeaver
+- [x] 1password
+- [x] 1password-cli (op)
+- [x] cloudflare-warp
+- [x] wez-term
+- [x] zim
+- [x] direnv
 
 ## Setup
 - [ ] 1password login
@@ -38,10 +39,9 @@
 - [x] github-cli login
 - [ ] git verified commit
 - [x] vscode login
-- [ ] Jetbrain login
 - [x] Set default EDITOR
-- [ ] Jetbrans Monospace Nerd font
-- [ ] Manual dotfile setup
+- [ ] Jetbrains Monospace Nerd font
+- [ ] dotfile setup with nix
 - [ ] Set keybind:
   - [ ] terminal
   - [ ] explorer
@@ -49,20 +49,14 @@
   - [ ] change workspace
   - [ ] move app to a workspace
 - [x] Backup Nix config
-- [ ] Setup dotfile
 
 ## Optional install
 
-- [ ] Cursor
 - [ ] qemu
 - [ ] kvm
 - [ ] gnome config
 - [ ] flameshot
 - [ ] obs-studio
-- [ ] kdenlive
-- [ ] gimp
-- [ ] inkscape
-- [ ] auto load direnv in a specific repo folder
   
 ## Commands
 
