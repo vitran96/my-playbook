@@ -13,7 +13,7 @@
 - [x] git
 - [x] wget
 - [x] podman & podman docker alias
-- [x] Vietnamese keyboard (telex): https://discourse.nixos.org/t/how-to-type-in-vietnamese-in-nixos/41063/2
+- [ ] Vietnamese keyboard (telex): https://discourse.nixos.org/t/how-to-type-in-vietnamese-in-nixos/41063/2
 - [x] Steam
 - [x] Logitech device manager: https://github.com/pwr-Solaar/Solaar
 
@@ -33,9 +33,9 @@
 - [x] flameshot
 
 ## Setup
-- [ ] 1password login
+- [x] 1password login
 - [x] Firefox login
-- [ ] Google login
+- [x] Google login
 - [x] github login
 - [x] github-cli login
 - [x] git verified commit
