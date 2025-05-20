@@ -5,7 +5,7 @@
 ### Init
 - [x] Enble nix-flake
 - [x] Enable nix home-manager: https://nix-community.github.io/home-manager/#sec-install-nixos-module
-- [ ] Setup GPG for signing commit
+- [x] Setup GPG for signing commit with `gpg --full-generate-key` or `gpg --default-new-key-algo rsa4096 --gen-key`. Then `gpg --list-secret-keys --keyid-format=long` and use `**/<key id>` key id to generate ? with `gpg --armor --export <key id> > ~/.gnupg/<key id>.asc` and import with `gh gpg add -t <title> ~/.gnupg/<key id>.asc`.
 
 ### System packages
 - [x] zsh
@@ -13,14 +13,14 @@
 - [x] git
 - [x] wget
 - [x] podman & podman docker alias
-- [ ] Vietnamese keyboard (telex)
+- [x] Vietnamese keyboard (telex): https://discourse.nixos.org/t/how-to-type-in-vietnamese-in-nixos/41063/2
 - [x] Steam
 - [x] Logitech device manager: https://github.com/pwr-Solaar/Solaar
 
 ### User packages
 - [x] VS Code
 - [x] Love2D
-- [ ] emacs & spacemacs: https://ironshark.org/posts/2024-06-rethinkrefactorrebuild-3/
+- [x] emacs & spacemacs: https://ironshark.org/posts/2024-06-rethinkrefactorrebuild-3/
 - [x] vim-plug
 - [x] github cli
 - [x] dbeaver
@@ -30,6 +30,7 @@
 - [x] wez-term
 - [x] zim
 - [x] direnv
+- [x] flameshot
 
 ## Setup
 - [ ] 1password login
@@ -37,12 +38,12 @@
 - [ ] Google login
 - [x] github login
 - [x] github-cli login
-- [ ] git verified commit
+- [x] git verified commit
 - [x] vscode login
 - [x] Set default EDITOR
-- [ ] Jetbrains Monospace Nerd font
-- [ ] dotfile setup with nix
-- [ ] Set keybind:
+- [x] Jetbrains Monospace Nerd font
+- [x] dotfile setup with nix
+- [ ] Set keybind: https://discourse.nixos.org/t/nixos-options-to-configure-gnome-keyboard-shortcuts/7275/15
   - [ ] terminal
   - [ ] explorer
   - [ ] browser
@@ -54,8 +55,9 @@
 
 - [ ] qemu
 - [ ] kvm
+- [ ] vagrant
+- [ ] virtualbox
 - [ ] gnome config
-- [ ] flameshot
 - [ ] obs-studio
   
 ## Commands
