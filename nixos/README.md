@@ -13,14 +13,15 @@
 - [x] git
 - [x] wget
 - [x] podman & podman docker alias
-- [ ] Vietnamese keyboard (telex): https://discourse.nixos.org/t/how-to-type-in-vietnamese-in-nixos/41063/2
+- [x] Vietnamese keyboard (telex): use fcitx5 with fcitx5-unikey
 - [x] Steam
 - [x] Logitech device manager: https://github.com/pwr-Solaar/Solaar
 
 ### User packages
 - [x] VS Code
 - [x] Love2D
-- [x] emacs & spacemacs: https://ironshark.org/posts/2024-06-rethinkrefactorrebuild-3/
+- [x] emacs 
+- [ ] spacemacs: https://ironshark.org/posts/2024-06-rethinkrefactorrebuild-3/
 - [x] vim-plug
 - [x] github cli
 - [x] dbeaver
@@ -44,8 +45,8 @@
 - [x] Jetbrains Monospace Nerd font
 - [x] dotfile setup with nix
 - [ ] Set keybind: https://discourse.nixos.org/t/nixos-options-to-configure-gnome-keyboard-shortcuts/7275/15
-  - [ ] terminal
-  - [ ] explorer
+  - [x] terminal (MANUAL)
+  - [x] explorer (MANUAL)
   - [ ] browser
   - [ ] change workspace
   - [ ] move app to a workspace
