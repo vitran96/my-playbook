@@ -33,6 +33,8 @@
 - [x] direnv
 - [x] flameshot
 
+Flameshot not work: https://github.com/flameshot-org/flameshot/issues/3363
+
 ## Setup
 - [x] 1password login
 - [x] Firefox login
