@@ -8,6 +8,8 @@ config.yml
 roles*
 hosts
 
+!/nixos/**/hosts
+
 # No inventory
 inventory.ini
 

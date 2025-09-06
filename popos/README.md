@@ -1,10 +1,5 @@
 # Pop_OS playbook
 
-# Notes
-
-2. How to toggle title bar with cmd??
-3. What is OSD notification?
-
 # Tool note
 
 - Use `xprop` to get running application class and title
@@ -22,7 +17,6 @@ sudo cp ~/.config/monitors.xml ~gdm/.config/
 - migrate config?
   - pop-system-updater ($HOME/.config/pop-system-updater/config.ron)
 - No launch dock
-- change wallpaper to Gura
 - Install and openSSH server if needed (https://gist.github.com/vitran96/8b67952f05e89cc940b20d24159a9475)
 - close SSH port server after finish
 - Settings:
@@ -140,6 +134,15 @@ It seems that kernel 5.8+ does not work well with PopOS
 sudo kernelstub -a "mem_sleep_default=deepi"
 ```
 
+## Nala:
+- Install nala
+```bash
+sudo apt install nala
+
+# update source list
+sudo nala fetch
+```
+
 ## Ibus-Unikey:
 
 - Install ibus-unikey:
@@ -198,53 +201,23 @@ gh auth login
 gh auth setup-git
 ```
 
-## zsh:
- <!-- example config: https://gitlab.com/dtos/etc/dtos-zsh/-/blob/main/etc/dtos/.zshrc -->
-- migrate my configuration
+# Git LFS
+
 ```bash
-ln -s $HOME/.dotfiles/linux/.zshrc $HOME/.zshrc
-ln -s $HOME/.dotfiles/linux/.p10k.zsh $HOME/.p10k.zsh
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 ```
+
+## zsh
 - install zsh:
 ```bash
-sudo apt install zsh
+sudo nala install -y zsh
 ```
-- install oh my zsh:
-```bash
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-# Plugins
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-```
-- install powerlevel10k
-```bash
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-```
-
-## bashrc
-
-- migrate configuration
-```bash
-ln - s $HOME/.dotfiles/linux/.bashrc $HOME/.bashrc
-```
-
-## alacritty:
-- Install alacritty
-```bash
-sudo apt install alacritty
-```
-- Migrate config
-```bash
-ln -s $HOME/.dotfiles/alacritty $HOME/.config/alacritty
-```
-- set as default terminal
 
 ## vscode:
 - Install vscode (https://code.visualstudio.com/docs/setup/linux)
 ```bash
 # setup key and repo
-sudo apt-get install wget gpg
+sudo nala install wget gpg
 
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 
@@ -255,9 +228,9 @@ sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packag
 rm -f packages.microsoft.gpg
 
 # install vscode
-sudo apt install apt-transport-https
-sudo apt update
-sudo apt install code
+sudo nala install apt-transport-https
+sudo nala update
+sudo nala install code
 ```
 - Sync with GitHub
 
@@ -281,56 +254,27 @@ sudo apt install 1password
 ```
 
 ## Firefox:
-- Install Firefox
-- Sync Firefox
-- Set never show: "set this as default browser"
-- Add search engine:
-  - yt -> youtube
-  - gh -> github
-  - gg -> google
-  - wiki -> wiki
-- Log in:
-  - github
-  - google (main account)
-  - leetcode
-  - microsoft (main account)
-  - stackoverflow
-  - messenger
-  - grammaryly
-  - honey
-  - notion
-  - twitter
-  - zalo?
-  - figma
-
-## Intellij (removed)
-<!-- NOTE: now managed via toolbox -->
-- Install Intellij
-```bash
-sudo nala install snapd
-
-sudo snap install intellij-idea-community --classic
-update-desktop-database
-```
-- Manual config:
-  - Download vscode dark+ theme plugin
-  - Download code glance plugin
-  - Download JDK
-- Setup sync settings: https://github.com/vitran96/IntellijSettings.git
-- Other settings:
-  - Keymap: vscode copy (or Vim)
-  - Tools > Actions on save:
-    - Reformat code
-    - Optimize import
-    - Re-arrange code
-    - Run code-clean up
-- For IdeaVim:
-  - Install Vim plugin
-  - Set up configuration file:
-  ```bash
-  ln -s $HOME/.dotfiles/vim/.vimrc $HOME/.vimrc
-  ln -s $HOME/.dotfiles/idea/.ideavimrc $HOME/.ideavimrc
-  ```
+[x] Install Firefox
+[x] Sync Firefox
+[x] Set never show: "set this as default browser"
+[x] Add search engine:
+  [x] yt -> youtube
+  [x] gh -> github
+  [x] gg -> google
+  [x] wiki -> wiki
+[x] Log in:
+  [x] github
+  [x] google (main account)
+  [x] leetcode
+  [x] microsoft (main account)
+  [x] stackoverflow
+  [x] messenger
+  [x] grammaryly
+  [x] honey
+  [x] notion
+  [x] twitter
+  [x] zalo
+  [x] figma
 
 ## Timeshift:
 <!-- TODO: update timeshift config -->
@@ -344,33 +288,6 @@ sudo apt install timeshift
     - Weekly - 3 backup
   - Exclude?
   - Include?
-
-## Nala:
-- Install nala
-```bash
-sudo apt install nala
-
-# update source list
-sudo nala fetch
-```
-# Doom-emacs (removed)
-- Install Emacs
-```bash
-sudo apt install emacs
-```
-- Install Doom-emacs
-```bash
-git clone --depth 1 https://github.com/doomemacs/doomemacs $HOME/.emacs.d
-$HOME/.emacs.d/bin/doom install
-
-# autostart
-systemctl enable --user emacs
-systemctl start --user emacs
-```
-- Migrate config
-```bash
-ln -s $HOME/.dotfiles/.doom.d $HOME/.doom.d
-```
 
 ## Neo-vim:
 - Install neo-vim
@@ -394,12 +311,6 @@ ln -s $HOME/.dotfiles/nvim $HOME/.config/nvim
 
 ## Nautilus:
 - Show hidden file
-
-## nvm
-- Install nvm:
-```bash
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-```
 
 ## Aseprite:
 - Build from source
@@ -468,27 +379,6 @@ sudo nala install flameshot
 ln -s $HOME/.dotfiles/flameshot $HOME/.config/flameshot
 ```
 
-## godot
-
-Godot does not play well with PopOS-Tiling
-When work with Godot:
-- Turn off Tiling
-- Turn on Title bar
-
-Installation:
-<!-- TODO: consider build from source (https://docs.godotengine.org/en/latest/development/compiling/compiling_for_linuxbsd.html) -->
-- Install
-```bash
-sudo nala install godot3
-```
-- Migrate config
-```bash
-# TODO: maybe request or implement feature or make plugin to do setting sync
-# let's just copy for now
-rm $HOME/.config/godot/editor_settings-3.tres
-cp $HOME/.dotfiles/Godot/editor_settings-3.tres $HOME/.config/godot/editor_settings-3.tres
-```
-
 ## Gnome Tweak:
 - Install
 ```bash
@@ -529,47 +419,18 @@ sudo nala install steam
 sudo nala install obs-studio
 ```
 
-## discord (removed)
+## Discord
 
 - Install
 ```bash
-sudo nala install discord
+# Install via flatpak flathub com.discordapp.Discord
 ```
 - Login
-
-## kdenlive (removed)
-
-- Install
-```bash
-sudo nala install kdenlive
-```
-
-## python
-<!-- python3 is installed by default -->
-
-<!-- NOTE: use pyenv instead -->
-- Install
-```bash
-sudo nala install python3 python-is-python3
-```
 
 ## Compression tool
 <!-- zip, unzip is installed by default -->
 ```bash
 sudo nala install zip unzip
-```
-
-## Flatpak
-<!-- flatpak and flathub setup is done by default -->
-
-## qutebrowser (removed)
-- Install qutebrowser
-```bash
-sudo nala install qutebrowser
-```
-- Migrate config
-```bash
-ln -s $HOME/.dotfiles/qutebrowser $HOME/.config/qutebrowser
 ```
 
 ## Easy Effect:
@@ -589,226 +450,50 @@ flatpak install flathub com.github.wwmm.easyeffects
   - Output > Preset > Load LoudnessEqualizer.json
   - Pipewire > Preset Autoloading > Set audio output for preset
 
-<!-- TODO: check out cadence? and carla? -->
-
-## Container tool - podman (removed)
-<!-- TODO: find away to pull docker.io/... without remembering docker.io -->
-- Install
+## Podman
 ```bash
 sudo nala install podman
 ```
 
-## Virtualize tool:
-- Install
+## Podman-compose
 ```bash
-sudo nala install cpu-checker
-sudo nala install vagrant virtualbox
-
-# qemu libvrd
-sudo nala install qemu-kvm virt-manager libvirt-daemon-system virtinst libvirt-clients bridge-utils
-
-# Start libvirtd service
-sudo systemctl enable --now libvirtd
-sudo systemctl start libvirtd
-
-# Confirm libvirtd is run
-sudo systemctl status libvirtd
-
-# Set right
-sudo usermod -aG kvm $USER
-sudo usermod -aG libvirt $USER
-```
-- Setup bridge (optinal)
-```bash
-# network:
-#   ethernets:
-#     enp0s3:
-#       dhcp4: false
-#       dhcp6: false
-#   # add configuration for bridge interface
-#   bridges:
-#     br0:
-#       interfaces: [enp0s3]
-#       dhcp4: false
-#       addresses: [192.168.1.162/24]
-#       macaddress: 08:00:27:4b:1d:45
-#       routes:
-#         - to: default
-#           via: 192.168.1.1
-#           metric: 100
-#       nameservers:
-#         addresses: [4.2.2.2]
-#       parameters:
-#         stp: false
-#       dhcp6: false
-#   version: 2
-sudo vi /etc/netplan/01-netcfg.yaml
-
-sudo netplan apply
-
-ip add show
-
 ```
 
-## Fingerprint scan
+
+## Fingerprint scan [TODO]
 <!-- I cannot find a way to do this. Fail to setup for DELL Inspiron 5000 -->
 
-## Spotify (removed)
-- Install
-```bash
-curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add -
-echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 
-sudo nala update
-sudo nala install spotify-client
-```
-
-# Nix
+## Nix
 - Install
 ```bash
 sudo install -d -m755 -o $(id -u) -g $(id -g) /nix
 curl -L https://nixos.org/nix/install | sh
 ```
 
-# Elm (removed)
-https://github.com/elm/compiler/blob/master/installers/linux/README.md
-
-# Haskell Stack build tool (removed)
-```bash
-curl -sSL https://get.haskellstack.org/ | sh
-```
-
-# Jetbrain's Toolbox
+## Jetbrain's Toolbox
 
 1. Download from Jetbrain site
 2. Untar
 3. Start the App
 4. Create folder at `$HOME/.local/share/JetBrains/Toolbox/scripts`
 
-# Figma Linux (removed)
-<!-- TODO -->
-
-# Jabba (Java version manager) - optional (since this might not work with spring boot cli) (removed)
-1. Install Jabba
-```bash
-export JABBA_VERSION=0.11.2
-curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.jabba/jabba.sh
-```
-2. Install Java
-```bash
-jabba install openjdk-ri@1.8
-jabba use openjdk-ri@1.8
-jabba alias default openjdk-ri@1.8
-```
-
-# Maven
-1. Install Maven
-```bash
-```
-
-# SDKMAN
-https://sdkman.io/install
-1. Install SDKMAN
-```bash
-curl -s "https://get.sdkman.io" | bash
-```
-
-# Sprint boot
-1. Install via SDKMAN
-```bash
-sdk install springboot 2.2.4.RELEASE
-```
-
-# Java via SDKMAN
-1. Install Java
-```bash
-sdk install java 8.0.302-open
-```
-
-# RemotePC Viewer (NOT USED)
-Deb from link: https://www.remotepc.com/remote-access-linux
-
-# Clojure
-
-```bash
-curl -L -O https://github.com/clojure/brew-install/releases/latest/download/linux-install.sh
-chmod +x linux-install.sh
-sudo ./linux-install.sh
-```
-
-# .Net Core + ASP.NET
-
-# Rust
-
-# Zoom (NOT USED)
-
-# MS Teams (NOT USED)
-
-# MS Edge (NOT USED)
-
-# 1password cli
+## 1password cli
 
 ```shell
 op --help
 ```
 
-# ZeroTier (NOT USED)
-
-https://www.zerotier.com/download/#entry-5
-
-```bash
-curl -s 'https://raw.githubusercontent.com/zerotier/ZeroTierOne/main/doc/contact%40zerotier.com.gpg' | gpg --import && \  
-if z=$(curl -s 'https://install.zerotier.com/' | gpg); then echo "$z" | sudo bash; fi
-```
-
-# Moonlight (NOT USED)
-
-https://github.com/moonlight-stream/moonlight-qt/releases
-
-```bash
-sudo snap install moonlight
-```
-
-# Deb-get
+## Deb-get
 https://github.com/vitran96/deb-get
 
-# Bruno (REMOVED)
-
-https://www.usebruno.com/downloads
-
-# ansible
-
-# gem + rubyenv + ruby
-
-<!-- NOTE: this was installed because of vagrant installation failure -->
-
-# qemu + kvm
-
-
-## Cloud storate (NOT USED)
-- Main GG Drive?
-- Main Onedrive?
-- Work Onedrive?
-
-# Git LFS
-
-```bash
-curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
-```
-
-# Deno
-
-```bash
-curl -fsSL https://deno.land/install.sh | sh
-```
-
-# MISE en place
+## MISE en place
 
 ```bash
 curl https://mise.run | sh
 ```
 
-# Love2D
+## Love2D [?]
 
 https://love2d.org/wiki/Getting_Started
 
@@ -817,54 +502,72 @@ sudo add-apt-repository ppa:bartbes/love-stable
 sudo apt update
 ```
 
-## Other package:
+## Chrome
 
-- Dev tool:
-  - Python tool:
-    - pip3?
-  - Java tool?:
-    - gradle
-  - postman?
-  - htop? htim?
-  - diffmerge tool?
-  - octave? (config https://gist.github.com/vitran96/debe1deeaf2601b0d48fad689f01a3ff)
-  - entr(run)?
-  - bat?
-  - bruno (https://www.usebruno.com/downloads)
-- Design tool:
-  - gimp?
-  - inkscape?
-  - krita?
-  - blender?
-  - lmms?
-- Virtualize tool:
-  - ansible
-  - wine? bottle?
-- Container tool
-  - podmon-toolbox?
-  - docker?
-  - k8s? k3s?
-  - distrobox?
-- Gaming:
-  - steamcmd?
-  - lutris?
-  - moonlight?
-  - parsec?
-  - rainway?
-- Console Emulator:
-  - GBA: ?
-- Filesystem:
-  - pcmanfm?
-  - ranger? vifm?
-  - exa?
-- Cloud service tool:
-  - heroku-cli?
-  - aws-cli-v2?
-- Package manager:
-  - something to handle AppImage?
-  - nix package manager? devbox?
-- VPN:
-  - warp
-- IDE / Text editor to check:
-- Others:
-  - pfetch / neofetch?
+## Obsidian
+```bash
+snap install obsidian --classic
+```
+
+## Wez-term
+New default terminal
+
+## DBeaver
+
+
+## Gearlevel
+
+## Cursor
+
+## Balena Etcher
+
+## Chezmoi
+https://www.chezmoi.io/install/#__tabbed_5_5
+
+```bash
+snap install chezmoi --classic
+
+git remote add origin git@github.com:vitran96/dotfiles.git
+git fetch origin
+git switch main
+```
+
+## Tiled
+
+## Zimfw
+
+## Direnv
+
+## bat
+
+## zoxide
+
+## Safe rm
+
+## lsd
+
+## ripgrep
+
+## btop
+
+## htop
+
+## fzf
+
+## ranger
+
+## fd (find alternative)
+
+## tree
+
+## du-dust
+
+## dua
+
+## PDF Latex / latexml [?]
+
+## Jujutsu JJ [?]
+
+https://github.com/jj-vcs/jj
+
+## Deja Du [?]
