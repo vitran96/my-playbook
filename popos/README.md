@@ -428,26 +428,16 @@ flatpak flathub install com.github.wwmm.easyeffects
   - Output > Preset > Load LoudnessEqualizer.json
   - Pipewire > Preset Autoloading > Set audio output for preset
 
-## Pipx
+## Docker
 ```shell
-sudo nala install -y pipx
+sudo nala install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+sudo systemctl status docker
+docker --version
+
+sudo usermod -aG docker $USER
+newgrp docker
 ```
-
-## Podman
-```shell
-# Install
-sudo nala install -y podman
-
-# Move storage folder
-# Can change /mnt/bo2
-ln -s /mnt/bo2/podman-containers $HOME/.local/share/containers
-```
-
-## Podman-compose
-```shell
-pipx install podman-compose
-```
-
 
 ## Fingerprint scan [TODO]
 <!-- I cannot find a way to do this. Fail to setup for DELL Inspiron 5000 -->
