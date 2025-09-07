@@ -8,7 +8,7 @@
 
 ## Pop OS setting:
 - Copy monitor layout to gdm
-```bash
+```shell
 sudo cp ~/.config/monitors.xml ~gdm/.config/
 ```
 - Performance setting:
@@ -48,7 +48,7 @@ sudo cp ~/.config/monitors.xml ~gdm/.config/
 
 ## update
 
-```bash
+```shell
 sudo nala update
 sudo nala upgrade
 
@@ -115,7 +115,7 @@ sudo nala install build-essential
 # My Key Mapping
 <!-- TODO: find a better way to configure key map / key bind -->
 - Swap caps and escape
-```bash
+```shell
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape_shifted_capslock']"
 ```
 
@@ -130,13 +130,13 @@ gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape_shifted
 
 It seems that kernel 5.8+ does not work well with PopOS
 
-```bash
+```shell
 sudo kernelstub -a "mem_sleep_default=deepi"
 ```
 
 ## Nala:
 - Install nala
-```bash
+```shell
 sudo apt install nala
 
 # update source list
@@ -146,7 +146,7 @@ sudo nala fetch
 ## Ibus-Unikey:
 
 - Install ibus-unikey:
-```bash
+```shell
 sudo apt install ibus-unikey
 ibus restart
 
@@ -157,7 +157,7 @@ ibus-daemon &
 - Remove Emoji shortcut in `ibus-setup` > Advance
 - Fonts: https://github.com/ryanoasis/nerd-fonts
 - Install JetbrainsMono Nerd Font:
-```bash
+```shell
 cd $HOME/Downloads
 
 curl -s https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest \
@@ -171,13 +171,6 @@ unzip "JetBrainsMono.zip" "*.ttf" "*.otf" -d $HOME/.local/share/fonts
 fc-cache $HOME/.local/share/fonts
 ```
 
-## Pop-shell
-- Migrate config
-```bash
-rm $HOME/.config/pop-shell/config.json
-ln -s $HOME/.config/pop-shell/config.json $HOME/.dotfiles/pop-shell/config.json
-```
-
 ## PopOS Shell:
 
 - Remove Window title bar
@@ -185,16 +178,16 @@ ln -s $HOME/.config/pop-shell/config.json $HOME/.dotfiles/pop-shell/config.json
 
 ## Git + GitHub CLI:
 - migrate config
-```bash
+```shell
 mkdir -p $HOME/.config/gh/
 ln -s $HOME/.dotfiles/gh/config.yml $HOME/.config/gh/config.yml
 ```
 - Install git + gh
-```bash
+```shell
 sudo nala install git gh
 ```
 - Setup:
-```bash
+```shell
 # Config git with gh for authentication and ssh
 gh auth login
 
@@ -203,19 +196,19 @@ gh auth setup-git
 
 # Git LFS
 
-```bash
+```shell
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 ```
 
 ## zsh
 - install zsh:
-```bash
+```shell
 sudo nala install -y zsh
 ```
 
 ## vscode:
 - Install vscode (https://code.visualstudio.com/docs/setup/linux)
-```bash
+```shell
 # setup key and repo
 sudo nala install wget gpg
 
@@ -236,7 +229,7 @@ sudo nala install code
 
 ## 1Password:
 - Install 1Password (https://support.1password.com/install-linux/#debian-or-ubuntu):
-```bash
+```shell
 curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/keyrings/1password-archive-keyring.gpg
 
 echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/1password-archive-keyring.gpg] https://downloads.1password.com/linux/debian/amd64 stable main' | sudo tee /etc/apt/sources.list.d/1password.list
@@ -277,10 +270,9 @@ sudo apt install 1password
   [x] figma
 
 ## Timeshift:
-<!-- TODO: update timeshift config -->
 - Install Timeshift
-```bash
-sudo apt install timeshift
+```shell
+sudo nala install -y timeshift
 ```
 - Config:
   - Type: rsync (ext4)
@@ -291,19 +283,16 @@ sudo apt install timeshift
 
 ## Neo-vim:
 - Install neo-vim
-```bash
-sudo apt install neovim
+```shell
+sudo nala install -y neovim
 ```
 - Install plugin manager
-```bash
+```shell
 # Install vim-plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
-- Migrate config
-```bash
-ln -s $HOME/.dotfiles/nvim $HOME/.config/nvim
-```
+
 - Execute VIM command in VIM:
 ```
 :PlugInstall
@@ -314,7 +303,7 @@ ln -s $HOME/.dotfiles/nvim $HOME/.config/nvim
 
 ## Aseprite:
 - Build from source
-```bash
+```shell
 # Dependacies
 # Replace nala with apt if don't have nala
 sudo nala install -y g++ clang libc++-dev libc++abi-dev cmake ninja-build libx11-dev libxcursor-dev libxi-dev libgl1-mesa-dev libfontconfig1-dev
@@ -365,42 +354,31 @@ ninja aseprite
 ninja install
 ```
 - .desktop file
-```bash
+```shell
 ln -s $HOME/.dotfiles/linux/desktop/Aseprite.desktop $HOME/.local/share/applications/Aseprite.desktop
 ```
 
 ## Flameshot
 - Install:
-```bash
-sudo nala install flameshot
+```shell
+sudo nala install -y flameshot
 ```
 - Config
-```bash
+```shell
 ln -s $HOME/.dotfiles/flameshot $HOME/.config/flameshot
 ```
 
 ## Gnome Tweak:
 - Install
-```bash
-sudo nala install gnome-tweaks
+```shell
+sudo nala install -y gnome-tweaks
 ```
 - Install Firefox with tweak extension (if not done)
 - Install extensions:
   - Color picker: https://extensions.gnome.org/extension/3396/color-picker/
     - Keybind: Win + Shift + C
     - Notification type: OSD
-  - GS Connect: https://extensions.gnome.org/extension/1319/gsconnect/
-    - Set to move to Panel
-    - Install Firefox GSConnect extension
-    - Install KDE Connect on Phone
-    - Configure KDE Connect on Phone:
-      - Give permission for plugins
   - Lock keys: https://extensions.gnome.org/extension/36/lock-keys/
-  - Clipboard indicator: https://extensions.gnome.org/extension/779/clipboard-indicator/
-    - Move to top after select
-    - No keybind
-    - No cofirmation on clear
-    - Size: 5
   - Bluetooth quick connect: https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/
   - Sound output, input device chooser: https://extensions.gnome.org/extension/906/sound-output-device-chooser/
     - Hide if only 1
@@ -408,55 +386,66 @@ sudo nala install gnome-tweaks
 
 ## steam
 - Install steam
-```bash
-sudo nala install steam
+```shell
+sudo nala install -y steam
 ```
 - Login
 
 ## obs
 - Install
-```bash
-sudo nala install obs-studio
+```shell
+sudo nala install -y obs-studio
 ```
 
 ## Discord
 
 - Install
-```bash
-# Install via flatpak flathub com.discordapp.Discord
+```shell
+flatpak flathub install com.discordapp.Discord
 ```
 - Login
 
 ## Compression tool
 <!-- zip, unzip is installed by default -->
-```bash
+```shell
 sudo nala install zip unzip
 ```
 
 ## Easy Effect:
 - Install
-```bash
-flatpak install flathub com.github.wwmm.easyeffects
+```shell
+flatpak flathub install com.github.wwmm.easyeffects
 ```
 - Config
   - Autostart
   - Do not shutdown on closing
 - Set profile to Auto Balance:
   - Set up LoudnessEqualizer
-  ```bash
+  ```shell
   cp $HOME/.dotfiles/easyeffect/LoudnessEqualizer.json $HOME/.var/app/com.github.wwmm.easyeffects/config/easyeffects/output/
   ```
   - Open EasyEffect
   - Output > Preset > Load LoudnessEqualizer.json
   - Pipewire > Preset Autoloading > Set audio output for preset
 
+## Pipx
+```shell
+sudo nala install -y pipx
+```
+
 ## Podman
-```bash
-sudo nala install podman
+```shell
+# Install
+sudo nala install -y podman
+
+# Move storage folder
+# Can change /mnt/bo2
+ln -s /mnt/bo2/podman-containers $HOME/.local/share/containers
 ```
 
 ## Podman-compose
-```bash
+```shell
+pipx install podman-compose
 ```
 
 
@@ -464,11 +453,10 @@ sudo nala install podman
 <!-- I cannot find a way to do this. Fail to setup for DELL Inspiron 5000 -->
 
 
-## Nix
-- Install
-```bash
-sudo install -d -m755 -o $(id -u) -g $(id -g) /nix
-curl -L https://nixos.org/nix/install | sh
+## Nix Single-user mode
+https://nixos.org/download/
+```shell
+sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install) --no-daemon
 ```
 
 ## Jetbrain's Toolbox
@@ -481,50 +469,80 @@ curl -L https://nixos.org/nix/install | sh
 ## 1password cli
 
 ```shell
+sudo nala install -y 1password-cli
+
 op --help
 ```
 
 ## Deb-get
-https://github.com/vitran96/deb-get
+https://github.com/wimpysworld/deb-get
+
+```shell
+sudo apt install curl lsb-release wget
+curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
+```
 
 ## MISE en place
 
-```bash
+```shell
 curl https://mise.run | sh
 ```
 
-## Love2D [?]
+## Love2D
 
 https://love2d.org/wiki/Getting_Started
 
-```bash
+```shell
 sudo add-apt-repository ppa:bartbes/love-stable
-sudo apt update
+sudo nala update
+sudo nala install -y love
 ```
 
 ## Chrome
+```shell
+flatpak install flathub com.google.Chrome
+```
 
 ## Obsidian
-```bash
+```shell
 snap install obsidian --classic
 ```
 
 ## Wez-term
 New default terminal
+https://wezterm.org/install/linux.html#__tabbed_1_3
+
+```shell
+curl -fsSL https://apt.fury.io/wez/gpg.key | sudo gpg --yes --dearmor -o /usr/share/keyrings/wezterm-fury.gpg
+echo 'deb [signed-by=/usr/share/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' | sudo tee /etc/apt/sources.list.d/wezterm.list
+sudo chmod 644 /usr/share/keyrings/wezterm-fury.gpg
+
+sudo apt update
+sudo apt install wezterm
+```
 
 ## DBeaver
-
+```shell
+snap install dbeaver-ce
+```
 
 ## Gearlevel
+```shell
+flatpak install flathub it.mijorus.gearlever
+```
 
 ## Cursor
+1. Download app-image https://cursor.com/downloads
+2. Setup with gearlevel
 
 ## Balena Etcher
+Download app-image
+https://etcher.balena.io/#download-etcher
 
 ## Chezmoi
 https://www.chezmoi.io/install/#__tabbed_5_5
 
-```bash
+```shell
 snap install chezmoi --classic
 
 git remote add origin git@github.com:vitran96/dotfiles.git
@@ -533,41 +551,97 @@ git switch main
 ```
 
 ## Tiled
+```shell
+sudo nala install -y tiled
+```
 
 ## Zimfw
+Auto download by my zshrc
 
 ## Direnv
+```shell
+sudo nala install -y direnv
+```
 
 ## bat
+```shell
+sudo nala install -y bat
+```
 
 ## zoxide
+https://github.com/ajeetdsouza/zoxide
+```shell
+curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+```
 
 ## Safe rm
+```shell
+sudo nala install -y safe-rm
+```
 
 ## lsd
+```shell
+deb-get install lsd
+```
 
 ## ripgrep
+```shell
+deb-get install ripgrep
+```
+
+## ack
+```shell
+sudo nala install -y ack
+```
 
 ## btop
+```shell
+sudo nala install -y btop
+```
 
 ## htop
+```shell
+sudo nala install -y htop
+```
 
-## fzf
+## fzf Fuzzy Finder
+```shell
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+```
 
 ## ranger
+```shell
+sudo nala install -y ranger
+```
 
-## fd (find alternative)
+## fd
+`find` alternative
+```shell
+sudo nala install -y fd-find
+fdfind --help
+```
 
 ## tree
+```shell
+sudo nala install -y tree
+```
 
 ## du-dust
+`du` alternative
+https://github.com/bootandy/dust
+```shell
+deb-get install du-dust
+```
 
-## dua
+## dua-cli
+```shell
+curl -LSfs https://raw.githubusercontent.com/Byron/dua-cli/master/ci/install.sh | \
+    sh -s -- --git Byron/dua-cli --target x86_64-unknown-linux-musl --crate dua --tag v2.29.0
+```
 
-## PDF Latex / latexml [?]
+## Deja Du
 
-## Jujutsu JJ [?]
-
-https://github.com/jj-vcs/jj
-
-## Deja Du [?]
+```shell
+sudo nala install -y deja-dup
+```
