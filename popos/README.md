@@ -635,3 +635,13 @@ curl -LSfs https://raw.githubusercontent.com/Byron/dua-cli/master/ci/install.sh 
 ```shell
 sudo nala install -y deja-dup
 ```
+
+## Notion (unoffical)
+```shell
+flatpak install flathub io.github.brunofin.Cohesion
+```
+
+## Bruno REST client
+```shell
+sudo nala install -y bruno
+```
