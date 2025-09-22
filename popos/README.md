@@ -428,16 +428,18 @@ flatpak flathub install com.github.wwmm.easyeffects
   - Output > Preset > Load LoudnessEqualizer.json
   - Pipewire > Preset Autoloading > Set audio output for preset
 
-## Docker
+## Podman
+
 ```shell
-sudo nala install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+# Podman
+sudo nala install -y podman podman-docker
 
-sudo systemctl status docker
-docker --version
+sudo nala install -y pipx
 
-sudo usermod -aG docker $USER
-newgrp docker
+pipx install podman-compose
 ```
+
+Default podman run in rootless might not be able to create any custom network: https://github.com/containers/podman/discussions/23776
 
 ## Fingerprint scan [TODO]
 <!-- I cannot find a way to do this. Fail to setup for DELL Inspiron 5000 -->
