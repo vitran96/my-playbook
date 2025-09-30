@@ -647,3 +647,8 @@ flatpak install flathub io.github.brunofin.Cohesion
 ```shell
 sudo nala install -y bruno
 ```
+
+## Jujutsu
+```shell
+mise use jujutsu@0.33.0
+```
