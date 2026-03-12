@@ -9,9 +9,11 @@
 ## Pop OS setting:
 
 - Copy monitor layout to gdm
+
 ```shell
 sudo cp ~/.config/monitors.xml ~gdm/.config/
 ```
+
 - Performance setting:
   - Plugged: High Performance
   - Battery: Balance
@@ -116,6 +118,7 @@ sudo nala install build-essential
 # My Key Mapping
 <!-- TODO: find a better way to configure key map / key bind -->
 - Swap caps and escape
+
 ```shell
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape_shifted_capslock']"
 ```
@@ -139,6 +142,7 @@ sudo kernelstub -a "mem_sleep_default=deepi"
 ## Nala:
 
 - Install nala
+
 ```shell
 sudo apt install nala
 
@@ -148,7 +152,8 @@ sudo nala fetch
 
 ## Ibus-Unikey
 
-- Install ibus-unikey:
+- Install ibus-unikey
+
 ```shell
 sudo apt install ibus-unikey
 ibus restart
@@ -156,10 +161,12 @@ ibus restart
 # if ibus daemon not running
 ibus-daemon &
 ```
+
 - Turn off spell check
 - Remove Emoji shortcut in `ibus-setup` > Advance
 - Fonts: https://github.com/ryanoasis/nerd-fonts
 - Install JetbrainsMono Nerd Font:
+
 ```shell
 cd $HOME/Downloads
 
@@ -174,23 +181,28 @@ unzip "JetBrainsMono.zip" "*.ttf" "*.otf" -d $HOME/.local/share/fonts
 fc-cache $HOME/.local/share/fonts
 ```
 
-## PopOS Shell:
+## PopOS Shell
 
 - Remove Window title bar
 - Show hint
 
-## Git + GitHub CLI:
+## Git + GitHub CLI
 
 - migrate config
+
 ```shell
 mkdir -p $HOME/.config/gh/
 ln -s $HOME/.dotfiles/gh/config.yml $HOME/.config/gh/config.yml
 ```
+
 - Install git + gh
+
 ```shell
 sudo nala install git gh
 ```
+
 - Setup:
+
 ```shell
 # Config git with gh for authentication and ssh
 gh auth login
@@ -198,7 +210,7 @@ gh auth login
 gh auth setup-git
 ```
 
-# Git LFS
+## Git LFS
 
 ```shell
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
@@ -207,6 +219,7 @@ curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.s
 ## zsh
 
 - install zsh:
+
 ```shell
 sudo nala install -y zsh
 
@@ -216,6 +229,7 @@ chsh -s /usr/bin/zsh $USER
 ## vscode
 
 - Install vscode (https://code.visualstudio.com/docs/setup/linux)
+
 ```shell
 # setup key and repo
 sudo nala install wget gpg
@@ -233,6 +247,7 @@ sudo nala install apt-transport-https
 sudo nala update
 sudo nala install code
 ```
+
 - Sync with GitHub
 
 ## 1Password
@@ -328,6 +343,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 ## Aseprite
 
 - Build from source
+
 ```shell
 # Dependacies
 # Replace nala with apt if don't have nala
@@ -378,7 +394,9 @@ cmake \
 ninja aseprite
 ninja install
 ```
+
 - .desktop file
+
 ```shell
 ln -s $HOME/.dotfiles/linux/desktop/Aseprite.desktop $HOME/.local/share/applications/Aseprite.desktop
 ```
@@ -386,10 +404,13 @@ ln -s $HOME/.dotfiles/linux/desktop/Aseprite.desktop $HOME/.local/share/applicat
 ## Flameshot (DEPRECATED)
 
 - Install:
+
 ```shell
 sudo nala install -y flameshot
 ```
+
 - Config
+
 ```shell
 ln -s $HOME/.dotfiles/flameshot $HOME/.config/flameshot
 ```
@@ -397,9 +418,11 @@ ln -s $HOME/.dotfiles/flameshot $HOME/.config/flameshot
 ## Gnome Tweak (DEPRECATED)
 
 - Install
+
 ```shell
 sudo nala install -y gnome-tweaks
 ```
+
 - Install Firefox with tweak extension (if not done)
 - Install extensions:
   - Color picker: https://extensions.gnome.org/extension/3396/color-picker/
@@ -414,14 +437,17 @@ sudo nala install -y gnome-tweaks
 ## steam
 
 - Install steam
+
 ```shell
 sudo nala install -y steam
 ```
+
 - Login
 
 ## obs
 
 - Install
+
 ```shell
 sudo nala install -y obs-studio
 ```
@@ -429,9 +455,11 @@ sudo nala install -y obs-studio
 ## Discord
 
 - Install
+
 ```shell
 flatpak flathub install com.discordapp.Discord
 ```
+
 - Login
 
 ## Compression tool
@@ -448,14 +476,17 @@ sudo nala install zip unzip
 ```shell
 flatpak flathub install com.github.wwmm.easyeffects
 ```
+
 - Config
   - Autostart
   - Do not shutdown on closing
 - Set profile to Auto Balance:
   - Set up LoudnessEqualizer
+
   ```shell
   cp $HOME/.dotfiles/easyeffect/LoudnessEqualizer.json $HOME/.var/app/com.github.wwmm.easyeffects/config/easyeffects/output/
   ```
+
   - Open EasyEffect
   - Output > Preset > Load LoudnessEqualizer.json
   - Pipewire > Preset Autoloading > Set audio output for preset
@@ -480,6 +511,7 @@ Default podman run in rootless might not be able to create any custom network: h
 ## Nix Single-user mode
 
 https://nixos.org/download/
+
 ```shell
 sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install) --no-daemon
 ```
@@ -666,6 +698,7 @@ sudo nala install -y ranger
 ## fd
 
 `find` alternative
+
 ```shell
 sudo nala install -y fd-find
 fdfind --help
