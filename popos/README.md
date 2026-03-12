@@ -7,6 +7,7 @@
 # Manual step
 
 ## Pop OS setting:
+
 - Copy monitor layout to gdm
 ```shell
 sudo cp ~/.config/monitors.xml ~gdm/.config/
@@ -55,7 +56,7 @@ sudo nala upgrade
 sudo nala install build-essential
 ```
 
-## PopOS - Keyboard binding
+## PopOS - Keyboard binding (DEPRECATED)
 
 <!-- TODO: can I somehow back this up or change from command line? -->
 
@@ -120,6 +121,7 @@ gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape_shifted
 ```
 
 ## PopOS Launcher:
+
 - Shortcut:
   - Ctrl + J/K -> scroll
   - t: -> execute command in terminal
@@ -135,6 +137,7 @@ sudo kernelstub -a "mem_sleep_default=deepi"
 ```
 
 ## Nala:
+
 - Install nala
 ```shell
 sudo apt install nala
@@ -143,7 +146,7 @@ sudo apt install nala
 sudo nala fetch
 ```
 
-## Ibus-Unikey:
+## Ibus-Unikey
 
 - Install ibus-unikey:
 ```shell
@@ -177,6 +180,7 @@ fc-cache $HOME/.local/share/fonts
 - Show hint
 
 ## Git + GitHub CLI:
+
 - migrate config
 ```shell
 mkdir -p $HOME/.config/gh/
@@ -201,6 +205,7 @@ curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.s
 ```
 
 ## zsh
+
 - install zsh:
 ```shell
 sudo nala install -y zsh
@@ -208,7 +213,8 @@ sudo nala install -y zsh
 chsh -s /usr/bin/zsh $USER
 ```
 
-## vscode:
+## vscode
+
 - Install vscode (https://code.visualstudio.com/docs/setup/linux)
 ```shell
 # setup key and repo
@@ -229,9 +235,15 @@ sudo nala install code
 ```
 - Sync with GitHub
 
-## 1Password:
+## 1Password
+
 - Install 1Password (https://support.1password.com/install-linux/#debian-or-ubuntu):
+
 ```shell
+deb-get install 1password
+
+# OR
+
 curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/keyrings/1password-archive-keyring.gpg
 
 echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/1password-archive-keyring.gpg] https://downloads.1password.com/linux/debian/amd64 stable main' | sudo tee /etc/apt/sources.list.d/1password.list
@@ -248,34 +260,38 @@ sudo apt update
 sudo apt install 1password
 ```
 
-## Firefox:
-[x] Install Firefox
-[x] Sync Firefox
-[x] Set never show: "set this as default browser"
-[x] Add search engine:
-  [x] yt -> youtube
-  [x] gh -> github
-  [x] gg -> google
-  [x] wiki -> wiki
-[x] Log in:
-  [x] github
-  [x] google (main account)
-  [x] leetcode
-  [x] microsoft (main account)
-  [x] stackoverflow
-  [x] messenger
-  [x] grammaryly
-  [x] honey
-  [x] notion
-  [x] twitter
-  [x] zalo
-  [x] figma
+## Firefox
 
-## Timeshift:
+- [x] Install Firefox
+- [x] Sync Firefox
+- [x] Set never show: "set this as default browser"
+- [x] Add search engine:
+  - [x] yt -> youtube
+  - [x] gh -> github
+  - [x] gg -> google
+  - [x] wiki -> wiki
+- [x] Log in:
+  - [x] github
+  - [x] google (main account)
+  - [x] leetcode
+  - [x] microsoft (main account)
+  - [x] stackoverflow
+  - [x] messenger
+  - [x] grammaryly
+  - [x] honey
+  - [x] notion
+  - [x] twitter
+  - [x] zalo
+  - [x] figma
+
+## Timeshift
+
 - Install Timeshift
+
 ```shell
 sudo nala install -y timeshift
 ```
+
 - Config:
   - Type: rsync (ext4)
   - Backup:
@@ -283,12 +299,16 @@ sudo nala install -y timeshift
   - Exclude?
   - Include?
 
-## Neo-vim:
+## Neo-vim
+
 - Install neo-vim
+
 ```shell
 sudo nala install -y neovim
 ```
+
 - Install plugin manager
+
 ```shell
 # Install vim-plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
@@ -296,14 +316,17 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 ```
 
 - Execute VIM command in VIM:
-```
+
+```plaintext
 :PlugInstall
 ```
 
-## Nautilus:
+## Nautilus (DEPRECATED)
+
 - Show hidden file
 
-## Aseprite:
+## Aseprite
+
 - Build from source
 ```shell
 # Dependacies
@@ -360,7 +383,8 @@ ninja install
 ln -s $HOME/.dotfiles/linux/desktop/Aseprite.desktop $HOME/.local/share/applications/Aseprite.desktop
 ```
 
-## Flameshot
+## Flameshot (DEPRECATED)
+
 - Install:
 ```shell
 sudo nala install -y flameshot
@@ -370,7 +394,8 @@ sudo nala install -y flameshot
 ln -s $HOME/.dotfiles/flameshot $HOME/.config/flameshot
 ```
 
-## Gnome Tweak:
+## Gnome Tweak (DEPRECATED)
+
 - Install
 ```shell
 sudo nala install -y gnome-tweaks
@@ -387,6 +412,7 @@ sudo nala install -y gnome-tweaks
     - Do not extend Menu to fit name
 
 ## steam
+
 - Install steam
 ```shell
 sudo nala install -y steam
@@ -394,6 +420,7 @@ sudo nala install -y steam
 - Login
 
 ## obs
+
 - Install
 ```shell
 sudo nala install -y obs-studio
@@ -408,13 +435,16 @@ flatpak flathub install com.discordapp.Discord
 - Login
 
 ## Compression tool
+
 <!-- zip, unzip is installed by default -->
 ```shell
 sudo nala install zip unzip
 ```
 
-## Easy Effect:
+## Easy Effect
+
 - Install
+
 ```shell
 flatpak flathub install com.github.wwmm.easyeffects
 ```
@@ -448,6 +478,7 @@ Default podman run in rootless might not be able to create any custom network: h
 
 
 ## Nix Single-user mode
+
 https://nixos.org/download/
 ```shell
 sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install) --no-daemon
@@ -469,6 +500,7 @@ op --help
 ```
 
 ## Deb-get
+
 https://github.com/wimpysworld/deb-get
 
 ```shell
@@ -493,16 +525,19 @@ sudo nala install -y love
 ```
 
 ## Chrome
+
 ```shell
 flatpak install flathub com.google.Chrome
 ```
 
 ## Obsidian
+
 ```shell
 snap install obsidian --classic
 ```
 
 ## Wez-term
+
 New default terminal
 https://wezterm.org/install/linux.html#__tabbed_1_3
 
@@ -516,24 +551,29 @@ sudo apt install wezterm
 ```
 
 ## DBeaver
+
 ```shell
 snap install dbeaver-ce
 ```
 
 ## Gearlevel
+
 ```shell
 flatpak install flathub it.mijorus.gearlever
 ```
 
-## Cursor
+## Cursor (DEPRECATED)
+
 1. Download app-image https://cursor.com/downloads
 2. Setup with gearlevel
 
 ## Balena Etcher
+
 Download app-image
 https://etcher.balena.io/#download-etcher
 
 ## Chezmoi
+
 https://www.chezmoi.io/install/#__tabbed_5_5
 
 ```shell
@@ -545,71 +585,86 @@ git switch main
 ```
 
 ## Tiled
+
 ```shell
 sudo nala install -y tiled
 ```
 
 ## Zimfw
+
 Auto download by my zshrc
 
 ## Direnv
+
 ```shell
 sudo nala install -y direnv
 ```
 
 ## bat
+
 ```shell
 sudo nala install -y bat
 ```
 
 ## zoxide
+
 https://github.com/ajeetdsouza/zoxide
+
 ```shell
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 ```
 
 ## Safe rm
+
 ```shell
 sudo nala install -y safe-rm
 ```
 
 ## lsd
+
 ```shell
 deb-get install lsd
 ```
 
 ## ripgrep
+
 ```shell
 deb-get install ripgrep
 ```
 
 ## ack
+
 ```shell
 sudo nala install -y ack
 ```
 
 ## btop
+
 ```shell
 sudo nala install -y btop
 ```
 
 ## htop
+
 ```shell
 sudo nala install -y htop
 ```
 
 ## fzf Fuzzy Finder
+
 ```shell
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 ```
 
 ## ranger
+
 ```shell
 sudo nala install -y ranger
 ```
 
 ## fd
+
 `find` alternative
 ```shell
 sudo nala install -y fd-find
@@ -617,18 +672,21 @@ fdfind --help
 ```
 
 ## tree
+
 ```shell
 sudo nala install -y tree
 ```
 
 ## du-dust
-`du` alternative
-https://github.com/bootandy/dust
+
+`du` alternative: https://github.com/bootandy/dust
+
 ```shell
 deb-get install du-dust
 ```
 
 ## dua-cli
+
 ```shell
 curl -LSfs https://raw.githubusercontent.com/Byron/dua-cli/master/ci/install.sh | \
     sh -s -- --git Byron/dua-cli --target x86_64-unknown-linux-musl --crate dua --tag v2.29.0
@@ -641,16 +699,13 @@ sudo nala install -y deja-dup
 ```
 
 ## Notion (unoffical)
+
 ```shell
 flatpak install flathub io.github.brunofin.Cohesion
 ```
 
 ## Bruno REST client
-```shell
-sudo nala install -y bruno
-```
 
-## Jujutsu
 ```shell
-mise use jujutsu@0.33.0
+deb-get install bruno
 ```
