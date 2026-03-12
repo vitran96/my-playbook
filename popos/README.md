@@ -204,6 +204,8 @@ curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.s
 - install zsh:
 ```shell
 sudo nala install -y zsh
+
+chsh -s /usr/bin/zsh $USER
 ```
 
 ## vscode:
