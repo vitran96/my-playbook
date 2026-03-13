@@ -150,7 +150,9 @@ sudo apt install nala
 sudo nala fetch
 ```
 
-## Ibus-Unikey
+## Ibus-Unikey (DEPRECATED)
+
+NOTE: I currently cannot type Vietnamese anymore in PopOS 24.04 COSMIC
 
 - Install ibus-unikey
 
@@ -164,6 +166,9 @@ ibus-daemon &
 
 - Turn off spell check
 - Remove Emoji shortcut in `ibus-setup` > Advance
+
+## Install Jetbrains font
+
 - Fonts: https://github.com/ryanoasis/nerd-fonts
 - Install JetbrainsMono Nerd Font:
 
@@ -556,7 +561,7 @@ sudo nala update
 sudo nala install -y love
 ```
 
-## Chrome
+## GG Chrome
 
 ```shell
 flatpak install flathub com.google.Chrome
@@ -742,3 +747,20 @@ flatpak install flathub io.github.brunofin.Cohesion
 ```shell
 deb-get install bruno
 ```
+
+## Zed
+
+## Helix
+
+https://docs.helix-editor.com/package-managers.html#ubuntudebian
+
+```shell
+sudo add-apt-repository ppa:maveonair/helix-editor
+sudo apt update
+sudo apt install helix
+```
+
+## Warp (1.1.1.1) (DEPRECATED)
+
+## Anki desktop
+
