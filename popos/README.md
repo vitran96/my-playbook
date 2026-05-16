@@ -748,6 +748,12 @@ flatpak install flathub io.github.brunofin.Cohesion
 deb-get install bruno
 ```
 
+## Notion CLI
+
+```bash
+curl -fsSL https://ntn.dev | bash
+```
+
 ## Zed
 
 ## Helix
