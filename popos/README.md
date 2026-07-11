@@ -730,7 +730,7 @@ curl -LSfs https://raw.githubusercontent.com/Byron/dua-cli/master/ci/install.sh 
     sh -s -- --git Byron/dua-cli --target x86_64-unknown-linux-musl --crate dua --tag v2.29.0
 ```
 
-## Deja Du
+## Deja Dup
 
 ```shell
 sudo nala install -y deja-dup
@@ -755,6 +755,10 @@ curl -fsSL https://ntn.dev | bash
 ```
 
 ## Zed
+
+```bash
+curl -f https://zed.dev/install.sh | sh
+```
 
 ## Helix
 
