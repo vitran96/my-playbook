@@ -102,7 +102,7 @@ curl https://mise.run | sh
 sudo dnf copr enable aldantanneo/jj-vcs\
 sudo dnf install -y jj-cli
 
-# flatpak: install gearlever Obsidian, moonlight, Cohesion (community notion client), bruno, dbeaver ce, easyeffect, discord, anki
+# flatpak: install gearlever Obsidian, moonlight, Cohesion (community notion client), bruno, dbeaver ce, easyeffect, discord, anki, pika backup
 flatpak install -y flathub it.mijorus.gearlever
 flatpak install -y flathub md.obsidian.Obsidian
 flatpak install -y flathub it.mijorus.gearlever
@@ -113,6 +113,7 @@ flatpak install -y flathub io.dbeaver.DBeaverCommunity
 flatpak install -y flathub com.github.wwmm.easyeffects
 flatpak install -y flathub com.discordapp.Discord
 flatpak install -y flathub net.ankiweb.Anki
+flatpak install -y flathub org.gnome.World.PikaBackup
 
 # install cloudflare-warp
 curl -fsSl https://pkg.cloudflareclient.com/cloudflare-warp-ascii.repo | sudo tee /etc/yum.repos.d/cloudflare-warp.repo
@@ -127,10 +128,16 @@ if z=$(curl -s 'https://install.zerotier.com/' | gpg); then echo "$z" | sudo bas
 sudo dnf install -y chromium
 
 # install deja-dup
-sudo dnf install -y deja-dup
+# sudo dnf install -y deja-dup
 
 # install timeshift
-sudo dnf install -y timeshift
+#sudo dnf install -y timeshift
+# install polkit agent
+sudo dnf install -y mate-polkit
+
+# install snapper & btrfs-assistant
+sudo dnf install -y snapper
+sudo dnf install -y btrfs-assistant
 
 # install anydesk
 sudo tee /etc/yum.repos.d/AnyDesk-RPM.repo > /dev/null << "EOF"
@@ -221,18 +228,19 @@ chown $USER:$USER /mnt/<disk>
 ## Manual config
 
 1. Steam & Steam library path
-2. Timeshift config
-3. Deja-dup config
+2. Snapper & Btrfs-assistant config
+3. Pika backup config
 4. Firefox sync
 5. 1password login
-6. cloudflare-warp
-7. anydesk login
-8. discord
-9. obs-studio
+6. Cloudflare-warp
+7. Anydesk login
+8. Discord
+9. Obs-studio
 10. Cohesion (notion)
 11. Easy Effect
 12. Anki
 13. Zerotier
+14. Moonlight
 
 ## Setup LUKS auto decrypt
 
