@@ -307,4 +307,13 @@ IdleActionSec=10min
 Require TPM2
 This will trust the hardware and auto decrypt the disk without manually type in passphrase
 
-<!-- TODO: -->
+```shell
+# enroll tpm2
+sudo systemd-cryptenroll --tpm2-device=auto --tpm2-pcrs=7 /dev/nvme0n1p3
+
+# edit and add `tpm2-device=auto` to your partition entry.
+sudo -E nvim /etc/crypttab
+
+# rebuild the initramfs to apply changes.
+sudo dracut -fv --regenerate-all
+```
