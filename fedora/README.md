@@ -317,3 +317,7 @@ sudo -E nvim /etc/crypttab
 # rebuild the initramfs to apply changes.
 sudo dracut -fv --regenerate-all
 ```
+
+## Git code sign with ssh
+
+<!-- TODO: -->
