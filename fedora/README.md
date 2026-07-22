@@ -213,6 +213,9 @@ sudo chattr +C /mnt/afb13d7e-6933-4f35-bb39-c88937368daa/nocow
 # setup vn keyboard
 sudo dnf copr enable vuongtuha/fcitx5-bamboo
 sudo dnf install -y fcitx5 fcitx5-bamboo fcitx5-configtool fcitx5-gtk fcitx5-qt
+
+# btop
+sudo dnf install -y btop
 ```
 
 ## Setup 2nd drive
