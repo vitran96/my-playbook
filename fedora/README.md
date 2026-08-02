@@ -216,6 +216,9 @@ sudo dnf install -y fcitx5 fcitx5-bamboo fcitx5-configtool fcitx5-gtk fcitx5-qt
 
 # btop
 sudo dnf install -y btop
+
+# tailscale
+curl -fsSL https://tailscale.com/install.sh | sh
 ```
 
 ## Setup 2nd drive
