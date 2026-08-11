@@ -153,6 +153,9 @@ sudo dnf install -y anydesk
 # install podman-compose
 sudo dnf install podman-compose
 
+# install podman-docker
+sudo dnf install podman-docker
+
 # install git-lfs
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.rpm.sh | sudo bash
 sudo cp /etc/yum.repos.d/github_git-lfs.repo ~/github_git-lfs.repo.bak
